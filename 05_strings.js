@@ -27,7 +27,7 @@ const anotherString = gameName.slice(1, 5)
 // console.log(anotherString);  // all-
 
 const anotherString2 = gameName.slice(-3, 5)
-// console.log(anotherString2);   // blank - no output ???? why ???
+// console.log(anotherString2);   // empty string 
 
 const newStringOne = "  mdshoeb    "
 // console.log(newStringOne);           // as it is print with white spaces 

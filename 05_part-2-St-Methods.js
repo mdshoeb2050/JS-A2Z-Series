@@ -55,11 +55,12 @@ let part4 = text.slice(-12, -6);
 
 // substring()
 /* substring() is similar to slice(). 
-The difference is that start and end values less than 0 , ->  are treated as 0 in substring() */
+The difference is that start and end values less than 0 {Negative value } 
+then  -> those values treated as 0 in substring() */
 
 fruits="Apple, Banana, blackberry, grapes"
 // console.log(fruits.substring(7,13));  //Banana
-// console.log(fruits.substring(-1,6));  // -ve value treated as 0 [0-6] --> Apple,
+// console.log(fruits.substring(-1,6));  // -ve value treated as 0 [0-6] --> Apple,   {Interview Q}
 
 // Note - If you omit the second parameter, substring() will slice out the rest of the string.
 // console.log(fruits.substring(7));  //Banana, blackberry, grapes
@@ -68,33 +69,33 @@ fruits="Apple, Banana, blackberry, grapes"
 
 // String substr()
 /* substr() is similar to slice().
-The difference is that the  (second parameter) specifies the length of the extracted part. */
-// console.log(fruits.substr(7,6));   //Banana
-// console.log(fruits.substr(15,10)); //blackberry
+The difference is that the  (second parameter) specifies the {length of the extracted part.} */
+// console.log(fruits.substr(7,6));   //Banana  - lenght : 6
+// console.log(fruits.substr(15,10)); //blackberry - lenght : 10
 
 
 
 // replace()
 // The replace() method replaces a specified value with another value in a string:
 
-let sentence = "Please visit Microsoft, and again here ";
+let sentence = "Please visit Microsoft";
 let word = sentence.replace("Microsoft", "foclearning");
 // console.log(word);  //Please visit foclearning
 
 /*
 Note
-The replace() method does not change the string it is called on.
-The replace() method returns a new string.
-The replace() method replaces only the first match
+The replace() method  { does not change the string}  it is called on.
+>> The replace() method returns a new string.
+The replace() method replaces { only the first match }
 
-If you want to replace all matches, use a regular expression with the /g flag set. See examples below.
+If you want to replace all matches, use a {Regular expression} with the /g flag set. See examples below.
  */
 sentence = "Please visit Microsoft, and again here Microsoft ";
 let word2 = sentence.replace(/Microsoft/g, "foclearning");
 // console.log(word2);  //Please visit foclearning, and again here foclearning 
 
 
-// To replace case insensitive, use a regular expression with an /i flag (insensitive)
+// To replace {Case insensitive}, use a regular expression with an /i flag (insensitive)
 //Note -> Regular expressions are written without quotes. -> /MICROSOFT/i , /Microsoft/g
 let text3 = "Please visit Microsoft";
 let newText = text3.replace(/MICROSOFT/i, "foclearning"); 
@@ -144,7 +145,7 @@ text = "Hello".concat(" ", "World!");
 
 /*
 Note -> 
-All string methods return a new string. They don't modify the original string.
+All string methods return a new string. They {don't modify the original string.}
 
 Formally said:
 Strings are immutable: Strings cannot be changed, only replaced. 
@@ -228,7 +229,7 @@ text = "HELLO MOTTO";
 
 
 /*
-Note:-
+Note:-  {Interview Q }
 Property access might be a little unpredictable:
 It makes strings look like arrays (but they are not)
 If no character is found, [ ] returns undefined, while charAt() returns an empty string.
@@ -274,5 +275,5 @@ myArray2 = text.split("");
 */
 
 myArray2 = text.split();
-// If the separator is "", the returned array will be an array of single characters:
+// If the separator is ""(empty), the returned array will be an array of single characters:
 // console.log(myArray2); //[ 'a,b,c,d,e,f' ]
