@@ -26,4 +26,6 @@ let state;
 // object
 
 console.log(typeof undefined); // undefined
+
+// Here is the catch
 console.log(typeof null); // object
