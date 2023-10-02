@@ -112,6 +112,7 @@ function handleObject(anyobject){
 // handleObject(user)
 
 // you can pass object directly to the function
+
 // handleObject({
 //     username: "Aslam",
 //     price: 399

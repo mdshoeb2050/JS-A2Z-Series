@@ -47,45 +47,56 @@ if (true) {
  ***************************/
 
 
+// You can ask for Money to your elder brother , but your elder brother can't ask you for money.
+// Inner fun can access outer fun , But Outer fun can't acces innner fun properties or method due to scoping method. { child vs parent fun }
+// As much as you familiar with errors , you will become a good programmer.
+
 function one(){
     const username = "shoeb"
 
     function two(){
         const website = "foclearning.com"
-        console.log(username);
+        // console.log(username);
     }
-    // console.log(website);
+    // console.log(website);     // Gives Error - Hence fun two() won't be executed
 
      two()
 
 }
 
-one()
+one()  // fun call 
+
+
+/* Note : there will be a call stack who manages all function which have been called 
+ we will learn about "function call stack"  in upcoming lectures */
 
 if (true) {
     const username = "shoeb"
-    if (username === "shoeb") {
+    if (username === "shoeb") 
+    {
         const website = "foclearning"
-        // console.log(username + website);
+        console.log(username + website);   //shoebfoclearning
     }
-    // console.log(website);
+    // console.log(website);   // Error - website is not defined 
 }
                                         
-// console.log(username);
- 
+// console.log(username);    // Error - username is not defined 
+
+
+
 
 // ++++++++++++++++++ interesting ++++++++++++++++++
 
 
-// console.log(addone(5))
+// console.log(addone(5))  // 6  Here fun executed successfully  
 
-function addone(num){
+function addone(num){  // Normal function
     return num + 1
 }
 
 
 
-// addTwo(5)
-const addTwo = function(num){
+addTwo(5)   //ReferenceError: Cannot access 'addTwo' before initialization ->  Here fun will not execute and gives Error bcoz 
+const addTwo = function(num){  // function Expression  - here Expression varible : addTwo can hold entire function & JSON value and many more .
     return num + 2
 }
