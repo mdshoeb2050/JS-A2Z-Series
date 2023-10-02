@@ -40,10 +40,11 @@ Examples
 
 
 // key : value  => both are string in object behind the scene strign is considered
-// you can make also nedted objects
+// you can make also nested objects
 
 //creating a symbol and add to this into obejct to make symbol as a key
 const mySym = Symbol("key1")
+
 //creating an object
 const JsUser = {
     name: "Shoeb",
@@ -65,7 +66,7 @@ const JsUser = {
 // console.log( typeof JsUser[mySym])  //string
 
 
-// * Interview Q - Creatre a symbol make that key and access that value 
+// * Interview Q - Create a symbol make that key and access that value 
 JsUser.email = "mdshoeb1024@gmail.com"
 // Object.freeze(JsUser)  // value freez - ab aage koi bhi new value propogate nahi hoga iske andar
 JsUser.email = "mdshoeb1024@microsoft.com"
@@ -92,7 +93,7 @@ JsUser.greetingTwo = function(){
 }
 
 // console.log(JsUser.greeting);  //[Function (anonymous)]  - fun execute nahi hua h sirf uska reference aaya h
-// console.log(JsUser.greeting());   // undefined
+// console.log(JsUser.greeting());  
 
 // console.log(JsUser.greetingTwo()); 
 //Hello JS user, Shoeb 

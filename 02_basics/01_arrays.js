@@ -1,7 +1,7 @@
 // array
 //An array is a special variable, which can hold more than one value:
 
-//JavaScript arrays are resizable and can contain a mix of different data type
+//JavaScript arrays are resizable and can contain a { mix of different data type}
 
 //JavaScript arrays are not associative arrays and so, array elements cannot be accessed using arbitrary strings 
 

@@ -43,7 +43,7 @@ const real_another_array = another_array.flat(Infinity)
 
 
 
-// console.log(Array.from({name: "shoeb"})) // * can't able to convert into Arrya  - interesting case *
+// console.log(Array.from({name: "shoeb"})) // * can't able to convert into Array  - interesting case *
 // print empty string []
 
 

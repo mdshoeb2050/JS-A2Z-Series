@@ -1,4 +1,5 @@
 // today we will learn logical operators 
+
 // console.log(2 > 1);
 // console.log(2 >= 1);
 // console.log(2 < 1);
