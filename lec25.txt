@@ -11,6 +11,10 @@ notes :
   when the function s are called,it creates a memory phase and execution phase for the function 
   just like the main one.
 
+
+>> Returned value is passed to the global environment.
+>> Execution context gets deleted after successful execution.
+
 For live demo:
 browser > inspect > Sources
 create a snippet with few functions and visually experience the call stack.
