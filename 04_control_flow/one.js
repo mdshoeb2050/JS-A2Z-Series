@@ -40,6 +40,8 @@ if(2 === "2"){  // Type checking - condition :false
 
 // const balance = 1000
 
+
+/* Implicit scope : statement in 1 line  --> Bad practice */
 // if (balance > 500) console.log("test"),console.log("test2");
 
 // if (balance < 500) {
@@ -55,15 +57,21 @@ if(2 === "2"){  // Type checking - condition :false
 
 // }
 
+
+//Real life example 
+
 const userLoggedIn = true
 const debitCard = true
 const loggedInFromGoogle = false
 const loggedInFromEmail = true
 
-// if (userLoggedIn && debitCard && 2==3) {
+// if (userLoggedIn && debitCard && 2==3) {   // 2 -> true , 3 --> true
     // console.log("Allow to buy course");
 // }
 
-// if (loggedInFromGoogle || loggedInFromEmail) {
+// if (loggedInFromGoogle || loggedInFromEmail) {  // single check in multiple option condition
     // console.log("User logged in");
 // }
+
+// Note : In upcoming lectures you will learn multiple { conditional rendering }
+// conditional rendering link to diagram : https://miro.medium.com/v2/resize:fit:1400/1*cDDiXg9p6rKAja7rms4mfA.png

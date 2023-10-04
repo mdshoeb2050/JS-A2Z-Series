@@ -1,3 +1,5 @@
+// switch case will be more useful when you will learn -> Redux
+
 // switch (key) {
 //     case value:
         
@@ -7,8 +9,15 @@
 //         break;
 // }
 
-// const month = "march"
+// Tip : duplicate line --> shift + option + Down Arrow  (Mac ) 
+// Tip : duplicate line --> shift + alt + Down Arrow  (Windows ) 
 
+
+
+// You can use the break statement to end processing of 
+// a particular labeled statement within the switch statement.
+
+// const month = "march"
 switch (month) {
     case "jan":
         // console.log("January");
@@ -20,6 +29,28 @@ switch (month) {
         // console.log("march");
         break;
     case "april":
+        // console.log("april");
+        break;
+
+    default:
+        // console.log("default case match");
+        break;
+}
+
+// using numbers in switch
+
+// const month = 3
+switch (month) {
+    case 1:
+        // console.log("January");
+        break;
+    case 2:
+        // console.log("feb");
+        break;
+    case 3:
+        // console.log("march");
+        break;
+    case 4 :
         // console.log("april");
         break;
 
