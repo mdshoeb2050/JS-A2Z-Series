@@ -4,20 +4,21 @@ const user = {
     username: "shoeb",
     price: 999,
 
-    // to access/refers  current context properties , we use "this" keyword 
-    welcomeMessage: function() {
-        console.log(`${this.username} , welcome to website`);  //hitesh , welcome to website
-        console.log(this);
-        /*
-            {
-                username: 'shoeb',
-                price: 999,
-                welcomeMessage: [Function: welcomeMessage]
+    // to access/refers  current (parent) context properties , we use "this" keyword 
+            welcomeMessage: function() {
+                console.log(`${this.username} , welcome to website`);  //shoeb , welcome to website
+                console.log(this);
+                /*
+                    {
+                        username: 'shoeb',
+                        price: 999,
+                        welcomeMessage: [Function: welcomeMessage]
+                    }
+                */
             }
-        */
-    }
 
-}
+   }
+
 /*
 Note - 
     we can not use this keyword directly into arrow function 
@@ -91,13 +92,13 @@ Note -
 
 // const chai = function () {      
 //     let username = "shoeb"
-//     console.log(this.username);
+//     // console.log(this.username);  //undefined
 // }
 
-const chai =  () => {        // remove function keyword and use => after empty paranthesis
-    let username = "shoeb"
-    console.log(this);  // {} empty string 
-}
+// const chai =  () => {        // remove function keyword and use => after empty paranthesis
+//     let username = "shoeb"
+//     console.log(this);  // {} empty string 
+// }
 
 
 // chai()
@@ -105,6 +106,7 @@ const chai =  () => {        // remove function keyword and use => after empty p
 
 
 /* Passing arguments to Arrow function  */
+
 
 // 1: Explicit method  - use return keyword
 // const addTwo = (num1, num2) => {

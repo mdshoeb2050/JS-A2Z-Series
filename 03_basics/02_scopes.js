@@ -8,9 +8,9 @@ let a = 300     // Global scope
 if (true) {
     let a = 10    //local scope 
     const b = 20  // local scope 
-    // var c = 30   // Global scope 
+    // var c = 30   // Global scope   - this is the problem
     // or 
-     //c = 30   // Global scope 
+     //c = 30   // Global scope - this is the problem
     
 }
 
@@ -21,10 +21,13 @@ if (true) {
     // console.log("INNER: ", a);  //10   - local scope
 
     // Nested scope 
-    if (9>4) {
+    if (9>4) 
+    {
           
-        if (4<5) {
-             if (0<1) {
+        if (4<5) 
+        {
+             if (0<1) 
+             {
                 
              }
         }
@@ -49,7 +52,8 @@ if (true) {
 
 // You can ask for Money to your elder brother , but your elder brother can't ask you for money.
 // Inner fun can access outer fun , But Outer fun can't acces innner fun properties or method due to scoping method. { child vs parent fun }
-// As much as you familiar with errors , you will become a good programmer.
+
+//Tip : As much as you familiar with errors , you will become a good programmer.
 
 function one(){
     const username = "shoeb"

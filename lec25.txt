@@ -19,5 +19,5 @@ For live demo:
 browser > inspect > Sources
 create a snippet with few functions and visually experience the call stack.
 
-correct me if there are any mistakes or add to this if something is missing.
+
 

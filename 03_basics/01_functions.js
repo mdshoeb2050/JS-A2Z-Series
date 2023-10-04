@@ -47,10 +47,10 @@ function loginUserMessage(username ){
 }
 // console.log(loginUserMessage("shoeb"))   //shoeb just logged in
 // console.log(loginUserMessage(""))         //  just logged in
-// console.log(loginUserMessage())            // undefined just logged in   // when you pass nothing result will be undefined
+// console.log(loginUserMessage())            // undefined just logged in   // when you pass nothing,  result will be undefined
 
 
-function loginUserMessage2(username = "pappu"){   // here  "pappu" is a default value when user does'nt pass any argument in that case this default value pass to the function
+function loginUserMessage2(username = "pappu"){   // here  "pappu" is a default value (parameter) when user does'nt pass any argument in that case this default value pass to the function
     // if(username == undefined){
     //     console.log("PLease enter a username");
     //     return
@@ -82,12 +82,13 @@ eg - Add to cart feature in e-commerce app */
 
 /* Using {REST operator} you can pass infinite no of arguments  */
 function calculateCartPrice(...num1){
-    return num1
+    return num1  // fun return all value in Array form
 }
 // console.log(calculateCartPrice(200, 400, 500, 1000,2000))   //[ 200, 400, 500, 1000, 2000 ]
 
 
 /* Case-II */
+
 // function calculateCartPrice(val1, val2, ...num1){
 //     return num1
 // }

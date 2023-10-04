@@ -1,3 +1,13 @@
+/****************************
+ *      Lecture - 26
+ * -Control flow in javascript  in one shot
+ * 
+ ***************************/
+
+// Control flow is the order in which statements are executed in a program. 
+//  The default control flow is for statements to be read and executed in order from left-to-right,
+//  top-to-bottom in a program file.
+
 // if
 const isUserloggedIn = true
 const temperature = 41
@@ -9,16 +19,23 @@ const temperature = 41
 // }
 
 // console.log("Execute");
+if(2 == "2"){  //condition : true
+    // console.log("hello coders");
+}
+if(2 === "2"){  // Type checking - condition :false
+    // console.log("hello coders");
+}
+
 // <, >, <=, >=, ==, !=, ===, !==
 
 // const score = 200
 
 // if (score > 100) {
-//     let power = "fly"
+//     let power = "fly"   // local scope
 //     console.log(`User power: ${power}`);
 // }
 
-// console.log(`User power: ${power}`);
+// console.log(`User power: ${power}`);    // error 
 
 
 // const balance = 1000
