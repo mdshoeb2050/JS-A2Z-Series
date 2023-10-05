@@ -25,16 +25,35 @@ coding.forEach( (item) => {
     cpp
 */
 
+/* Something Interesting */
+// kisi normal function ka reference  forEach method me pass kaise kare ?
+
 // function printMe(item){
 //     console.log(item);
 // }
 
-// coding.forEach(printMe)
+// coding.forEach(printMe)   // here i have passed only function reference - baki fun will get executed automatically
 
-// coding.forEach( (item, index, arr)=> {
-//     console.log(item, index, arr);
-// } )
 
+/* Note - you can pass multiple parameters in forEach method  */
+coding.forEach( (item, index, arr)=> {     // here arr refers to - access to whole Array
+    // console.log(item, index, arr);
+} )
+/*
+    js 0 [ 'js', 'ruby', 'java', 'python', 'cpp' ]
+    ruby 1 [ 'js', 'ruby', 'java', 'python', 'cpp' ]
+    java 2 [ 'js', 'ruby', 'java', 'python', 'cpp' ]
+    python 3 [ 'js', 'ruby', 'java', 'python', 'cpp' ]
+    cpp 4 [ 'js', 'ruby', 'java', 'python', 'cpp' ]
+*/
+
+/* Note - you will get data from database in Array form which consists objects - 
+   in that case you have proper knowledge about how you will handle that array of objects  */
+
+// here i have taken an example - Array of Objects 
+
+// your task is : to fetch object's values inside whole array ??
+// Array >> objects >> value 
 const myCoding = [
     {
         languageName: "javascript",
@@ -52,10 +71,14 @@ const myCoding = [
 
 myCoding.forEach( (item) => {
     
-    // console.log(item.languageName);
+    // console.log(item.languageName); 
+
 } )
 /*
 javascript
 java
 python
 */
+
+
+// Note - Loops => To be continued....
