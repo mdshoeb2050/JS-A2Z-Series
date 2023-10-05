@@ -1,12 +1,29 @@
 const coding = ["js", "ruby", "java", "python", "cpp"]
 
-// coding.forEach( function (val){
+// coding.forEach( function (val){    // forEach needs a  Callback fun which returns a value to forEach method
 //     console.log(val);
 // } )
+/*
+    js
+    ruby
+    java
+    python
+    cpp
+*/
 
-// coding.forEach( (item) => {
-//     console.log(item);
-// } )
+// Arrow fun par bhi forEach method laga sakte h 
+// fun ka name nahi dena Bcoz hume value store nahi karna h variable me , use return karna h forEach()  method ko
+
+coding.forEach( (item) => {  
+    // console.log(item);
+} )
+/*
+    js
+    ruby
+    java
+    python
+    cpp
+*/
 
 // function printMe(item){
 //     console.log(item);
@@ -35,7 +52,7 @@ const myCoding = [
 
 myCoding.forEach( (item) => {
     
-    console.log(item.languageName);
+    // console.log(item.languageName);
 } )
 /*
 javascript

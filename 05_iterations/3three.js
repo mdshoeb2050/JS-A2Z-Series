@@ -7,7 +7,8 @@
 
 const arr = [1, 2, 3, 4, 5]
 
-for (const num of arr) {  // yaha loop me object hona jaruri nahi , string, map kuch bhi ho sakta h .
+for (const num of arr) {  // yaha loop me object hona jaruri nahi , string, map... kuch bhi ho sakta h 
+    // yaha object ka matlab -> koi entity (string , map , object(JS) ,, etc ) , naki JS wala object nahi 
     // console.log(num);
 }
 /*
@@ -65,7 +66,7 @@ for(const key of map ){
     // console.log(key);
 }
 /*
-key-value pairs in Array form 
+it prints key-value pairs in Array form 
 
 [ 'IN', 'India' ]
 [ 'USA', 'United States of America' ]
@@ -73,9 +74,19 @@ key-value pairs in Array form
 [ 'Cn', 'China' ]
 */
 
-// >>> Interesting syntax 
+// >>> Interesting syntax ( square bracket notation)
+for (const [key] of map) {  // destructing of array 
+    // console.log(key);
+}
+/*
+IN
+USA
+Fr
+Cn
+*/
+
 for (const [key, value] of map) {  // destructing of array 
-    console.log(key, '=>', value);
+    // console.log(key, '=>', value)
 }
 /*
 IN => India
@@ -85,14 +96,25 @@ Cn => China
 */
 
 const myObject = {
+    'game1': 'NFS',
+    'game2': 'Spiderman'
+}
+for (const [key, value] of myObject)
+    {
+    //    console.log(key, ':-', value);    //TypeError: myObject is not iterable
+    }
+
+const myObject1 = {
     game1: 'NFS',
     game2: 'Spiderman'
 }
 
-// for (const [key, value] of myObject) {
-//     console.log(key, ':-', value);
-    
+// for (const [key, value] of myObject1) {
+//     console.log(key, ':-', value);      //TypeError: myObject is not iterable
 // }
+
+
+/* Note -  there is another way exist by which we can iterate over Objects  , we will study in upcoming lectures */
 
 /*
    #conclusion 
