@@ -42,7 +42,7 @@ if(2 === "2"){  // Type checking - condition :false
 
 
 /* Implicit scope : statement in 1 line  --> Bad practice */
-// if (balance > 500) console.log("test"),console.log("test2");
+// if (balance > 500) console.log("test"),console.log("test2");  // Not good readable code
 
 // if (balance < 500) {
 //     console.log("less than 500");
