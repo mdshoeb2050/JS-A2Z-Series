@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <!--
+        NOTES :-
+
+        document.getElementById("title")
+        <h1 id=​"title" class=​"heading">​…​</h1>​
+
+        document.getElementById("title").id
+        'title'
+
+        document.getElementById("title").class
+        undefined
+
+        document.getElementById("title").className
+        'heading'
+
+        document.getElementById("title").getAttribute('id')
+        'title'
+
+        document.getElementById("title").getAttribute('class')
+        'heading'
+
+        document.getElementById("title").setAttribute('class', 'test')   // changed
+
+        document.getElementById("title").setAttribute('class', 'test heading') // title changes 
+
+       //storing result 
+        const title = document.getElementById("title")
+
+        title.style.backgroundColor ="green"    // green
+
+
+        title.style.padding="40px"
+
+        title.style.borderRadius="20px"
+
+        title.textContent
+        'DOM learning on Chai aur code test text'
+
+        title.innertext
+        undefined
+
+        title.innerHTML
+        'DOM learning on Chai aur code <span style="display: none;">test text</span>'
+  
+
+        // selectors in DOM
+        document.querySelector('h1')
+        <h1 id=​"title" class=​"heading">​…​</h1>​"DOM learning on Chai aur code "<span style=​"display:​ none;​">​test text​</span>​</h1>​
+
+        document.querySelector('#title')
+        <h1 id=​"title" class=​"heading">​…​</h1>​
+
+        document.querySelector('.heading')
+        <h1 id=​"title" class=​"heading">​…​</h1>​
+
+        document.querySelector('input[type="password"]')
+
+        document.querySelector('ul')
+        <ul>​…​</ul>​
+
+        // storing ul elements result into a const var named myul
+        const myul = document.querySelector('ul')
+        undefined
+
+        myul.querySelector('li')
+        <li class=​"list-item">​…​</li>​
+
+        // storing value into greenVar variable 
+
+        const greenVar=myul.querySelector('li')
+        undefined
+
+        greenVar.style.backgroundColor="green"
+        'green'
+
+        greenVar.style.padding="20px"
+        '20px'
+
+        greenVar.innerText   // 'one'
+
+        greenVar.innerText="five"  //'five'
+
+        document.querySelectorAll('li')
+            NodeList(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+            0: li.list-item
+            1: li.list-item
+            2: li.list-item
+            3: li.list-item
+            length: 4
+            [[Prototype]]: NodeListentries: ƒ entries()forEach: ƒ forEach()item: ƒ item()keys: ƒ keys()length: (...)values: ƒ values()constructor: ƒ NodeList()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "NodeList"get length: ƒ length()[[Prototype]]: Object
+         
+            // storing all li values into templiList
+            const templiList=document.querySelectorAll('li')
+            undefined
+
+            templiList
+            NodeList(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+           
+
+      >>>> Note - 
+         -> nodelist & HTML collection : pure Array nahi h , but array jaisa dikhta h kuch kuch milta julta h
+         // How to handle nodelist in DOM
+       
+         >templiList.style.color='green'  // wrong way
+
+         >templiList[0].style.color='green'  // right way // specifically index ka use karke batana hoga kon sa access kar rahe ho
+    
+         > templiList.forEach( function (l) {
+                l.style.backgroundColor ="green"
+            })
+
+
+->>>> Q : How to convert Nodelist/ HTML collection to Basic Array ?
+
+         > document.getElementsByClassName('list-item')
+         HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-ite
+          
+        const tempclassList =document.getElementsByClassName('list-item')
+        undefined
+
+        tempclassList
+        HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+        
+        // converting HTML collection to Basic Array...
+        Array.from(tempclassList)
+        (4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+        // storing results
+        const myConvertedArray =Array.from(tempclassList)
+        undefined
+
+
+        // now you can use Array methods on this myConvertedArray
+        myConvertedArray.forEach(function (li) {
+            li.style.color="orange"
+        })
+        undefined
+
+
+        ... rest lecture - 35:10
+
+
+
+
+
+
+
+
+
+    -->
+
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+         
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
