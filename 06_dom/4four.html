@@ -4,44 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chai aur code | DOM</title>
+    <title>DOM-part-IV</title>
 </head>
 <body style="background-color: #212121; color: #fff;">
     <ul class="language">
         <li>Javascript</li>
     </ul>
+    <!--
+      >>>Edit and remove elements in DOM
+       
+      
+
+    -->
 </body>
 <script>
+    // you can add list item in multiple ways 
+    // But here i am creating a fun to add list Item repeatedly 
     function addLanguage(langName){
+        //step-1 : creating li 
         const li = document.createElement('li');
+        // step-2 : putting innerHTML inside it
         li.innerHTML = `${langName}`
+        // step -3 :  attaching element to document 
         document.querySelector('.language').appendChild(li)
     }
+    // fun call to add list item
     addLanguage("python")
     addLanguage("typescript")
+    // addLanguage("C++")
+    // addLanguage("Java")
 
+    // Optimization tips - 
+    // Above method/fun will traversing whole DOM in each time to add new list item 
+    // Here is a optimization issue - good for some element but what happens when there are thousands or lakhs of list item (element) so there will be optimization issue 
+
+    // That's why we should follow optimized approach
+      
+    // Optimized method
     function addOptiLanguage(langName){
+        // creating li
         const li = document.createElement('li');
+        // direct inserting a Text node // purane wale code me whole innerHTML ko traverse  karna hota tha
         li.appendChild(document.createTextNode(langName))
+        // attaching li 
         document.querySelector('.language').appendChild(li)
     }
     addOptiLanguage('golang')
+    // addOptiLanguage('Ruby')
+    // addOptiLanguage('Python')
 
-    //Edit
+
+    // Tip : querySelector - it has came with jQuery , it includes html selectors, css selectors and JS selectors ,
+             // now we are using in JS : very powerful selector 
+    
+   //>>>Editing in existing element 
     const secondLang = document.querySelector("li:nth-child(2)")
     console.log(secondLang);
-    //secondLang.innerHTML = "Mojo"
+    //secondLang.innerHTML = "Mojo"  // innerHTML : not optimized way 
+    // when you are making small projects you can inneHTML mehtod but for larger project there will be a optimization issue 
+
+    // creating a new element and appending to li 
     const newli = document.createElement('li')
-    newli.textContent = "Mojo"
-    secondLang.replaceWith(newli)
+    newli.textContent = "Mojo"  // innerHTML , textContent  - you can use any
+    secondLang.replaceWith(newli)  // here i have reference of that element that why i have use replacewith method 
 
-    //edit
+    // Tip - : 
+    // textContents is all text contained by an element and all its children that are for formatting purposes only.
+    // innerText returns all text contained by an element and all its child elements. innerHtml returns all text, including html tags, that is contained by an element.
+     
+    
+   //edit
     const firstLang = document.querySelector("li:first-child")
-    firstLang.outerHTML = '<li>TypeScript</li>'
+    firstLang.outerHTML = '<li>TypeScript</li>'  // using outerHTML you can add  new list item directly to the target position  (Override)
+    
 
-    //remove
+    //remove existing element inside document 
     const lastLang = document.querySelector('li:last-child')
-    lastLang.remove()
+    lastLang.remove()  // last item removed
 
 
 </script>

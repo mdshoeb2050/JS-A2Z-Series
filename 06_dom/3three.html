@@ -7,20 +7,33 @@
     <title>DOM-part-III </title>
 </head>
 <body style="background-color: #212121; color: #fff;">
-    
+      
 </body>
 <script>
+    // creating a div element in DOM
     const div = document.createElement('div')
-    console.log(div);
+    // console.log(div);
+    //Adding properties/attributes ->(class, Id) in div element 
     div.className = "main"
+    //creating id and assigning value in it via random method
     div.id = Math.round(Math.random() * 10 + 1)
+    // modifying attribute 
     div.setAttribute("title", "generated title")
     div.style.backgroundColor = "green"
     div.style.padding = "12px"
-    // div.innerText = "Chai aur code"
-    const addText = document.createTextNode("Chai aur code")
-    div.appendChild(addText)
+    // Tip - Yet whatever i code all these things present inside memory 
+    //       I have to connect alll code to window browser page and have to display what i have written code 
 
-    document.body.appendChild(div)
+    // div.innerText = "Chai aur code" 
+    // Tip - diffrence b/w setAttribute method vs div.(classname)
+    //  setAttribute - Directly overide values on target element
+    // div.(classname) - But in this  case it first goes to target properties 
+    //          and fetch out their reference and then override with new values  - Double work 
+    
+    // that's why we should choose smart/optimal  approach 
+    const addText = document.createTextNode("Hello JS learner !")
+    div.appendChild(addText) // appending text to div
+
+    document.body.appendChild(div)  // attaching div to document body so that we can see visual display
 </script>
 </html>
