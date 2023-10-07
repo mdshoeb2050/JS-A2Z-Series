@@ -126,20 +126,44 @@
     //    console.log(e.target)   // kis particular target se Event occur ho raha yahi dekhne ke liye  
     //   console.log(e.target.parentNode)   // incase  target mil gaya h But aapko Parent ko select karna h 
 
-    //    console.log(e.target.tagName);
-    //     if (e.target.tagName === 'IMG') {
-    //         console.log(e.target.id);
-            let removeIt = e.target.parentNode   // parent ko select karke stoing in a varible 
+    //    console.log(e.target.tagName);   // isse element par click karke  uska tagName pata kar sakte h -  IMG , li etc .
+    //     if (e.target.tagName === 'IMG') { // yaha strict check lagakar sirf IMG tags wale elements ko hi remove karenege 
+            // let removeIt = e.target.parentNode   // parent ko select karke stoing in a varible 
             // removeIt.remove()                  // directly remove that img on clickng that  - 
             /*
              But ye method use karne ka ek disadvantage h ki - ul ke andar kisi bhi li par click karte hi sabhi li delete ho jayenge 
-             - bcoz aapne img ke jagah li par click kiya jisse uska ParentNode "ul" select ho gaya isiliye pura "ul" hi delete ho gaya 
+             - bcoz aapne img ke jagah li par click kiya jisse uska ParentNode "ul" select ho gaya isiliye pura "ul" hi delete ho gaya  isse bachne ke liye if wala check lagaya gaya h
             */
 
-           // This is a good way 
-            removeIt.parentNode.removeChild(removeIt) // 2nd method ->  // us li ke parent : ul , ko target karke jis element (whole li element) ko chahenge usko delte kar sakte h
+           // This is an another way of same working
+            // removeIt.parentNode.removeChild(removeIt) // 2nd method ->  // us li ke parent : ul , ko target karke jis element (whole li element) ko chahenge usko delte kar sakte h
     //     }
     })
+
+    // only code no coments here 
+    // A small Projects 
+    // document.querySelector('#images').addEventListener('click', function(e){ 
+    //     console.log(e.target.tagName); 
+    //     if(e.target.tagName=='IMG'){
+    //        console.log(e.target.id);
+    //        let removeIt = e.target.parentNode
+    //        removeIt.remove() 
+    //     }
+    // })
+    /*
+       IMG 
+       photoshop
+       IMG 
+       japan
+       IMG
+       river 
+       IMG
+       owl 
+       IMG 
+       prayer
+       li    // when you click on li - but ye delete nahi hoga bcoz humne if me sirf 'IMG' ka hi tag lagaya h
+       A     // when you click on google (anchor Tag) - sirf print hoga 'A' but ye delete nahi hoga bcoz humne if me sirf 'IMG' ka hi tag lagaya h
+    */
     
     //removeIt.parentNode.removeChild(removeIt)
 </script>
