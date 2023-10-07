@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>htnml Events </title>
+    <title>HTML Events </title>
 </head>
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image</h2>
@@ -27,46 +27,118 @@
     // you should use Event listeners : bcoz it give => functionality and propogation ability 
     // Eventlisteners can listen multiple things - keyboard activity , drag and drop 
     // H.W - Explore on event listeners 
-    //
-    document.getElementById('owl').addEventListener('click',function(){   // you can pass 3rd parameter also - true/false // kayi bar aapko interview me kuch application diya jata h , jisme bian true or false parameter diye bina kam hi nahi hota h
-        //  alert("Mouse clicking again")
-    })
+    
+
+    // document.getElementById('owl').addEventListener('click',function(){   // you can pass 3rd parameter also - true/false // kayi bar aapko interview me kuch application diya jata h , jisme bian true or false parameter diye bina kam hi nahi hota h
+    //     //  alert("Mouse clicking again")
+    // })
 
      // attachEvent()  - it is used when internet explorer used to run app smoothly 
     // jQuery - on        // jquery ka bhi trends tha kabhi 
 
-    // 12:30s
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log(e)
+    // },false)  // here is false is default parameter 
 
+    //Interview Q - find out window width and Height when you clicked on a events ?
+    // Interview Q - Tell me timestamp when user click on body or img (create an app)
+    // Interview Q - create an app when user click on a div there a circle got created 
+
+    // >>  what you have to study >>
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
-    // document.getElementById('images').addEventListener('click', function(e){
-    //     console.log("clicked inside the ul");
-    // }, false)
 
-    // document.getElementById('owl').addEventListener('click', function(e){
-    //     console.log("owl clicked");
-    //     e.stopPropagation()
-    // }, false)
+    //>>>> Event Propogation 
+    /*
+        Propagation refers to how events travel through the Document Object Model (DOM) tree. 
+        The DOM tree is the structure which contains parent/child/sibling elements in relation to each other. 
+        You can think of propagation as electricity running through a wire, until it reaches its destination.
+    */
+    //> Event Bubbling and  Event Capturing  - https://javascript.info/article/bubbling-and-capturing/eventflow.svg
     
-    // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation()
-    //     console.log("google clicked");
-    // }, false)
-   
+    /*
+      Event capturing means propagation of event is done from ancestor elements to child element in the DOM
+       while event bubbling means propagation is done from child element to ancestor elements in the DOM.
+       The event capturing occurs followed by event bubbling.
+
+       capturing => parent -> child
+       Bubbling  => child  -> Parent 
+    */
     
-    document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
-        }
-    
+    // document.getElementById('images').addEventListener('click', function(e){   // TargetID - images 
+    //     console.log("clicked inside the ul");
+    // }, false)  
+
+   /*
+      false - Bubbling Mode    // bottom -> top 
+      true  - Capturing Mode  // top -> bottom 
+
+      According to your Usecase you have to decide what's important for you - capturing or Bubbling 
+   */
+    document.getElementById('owl').addEventListener('click', function(e){   // TargetID - owl  
+        // ul > li > owl images    // Going from  Bottom to Top (Bubbling) // form inside to Outside 
+       // console.log("owl clicked");
+        // e.stopPropagation()  
+        /*
+           If you want to stop propagation  ( capturing or bubbling ) use method ->    // e.stopPropagation() 
+        */
+    }, false)
+  
+    /*
+       when parameter is : false   (event bubbling )
+       output is - 
+
+        owl clicked
+        clicked inside the ul
+    */
+
+    /*
+       when parameter is : true (event capturing )
+       output is - 
+       
+       clicked inside the ul
+       owl clicked
         
+    */
+    
+   // lets learn about ->     e.preventDefault();
+
+    // document.getElementById('google').addEventListener('click',function(e){  // function(e) -> event capturing 
+    //     e.preventDefault();
+    //     // e.stopPropagation()   // to stop P if you want 
+    //     console.log("google clicked");
+    // }, false) // bubbling : bottom -> top 
+   
+    /*
+      google clicked 
+      clicked inside the ul
+    */
+    
+
+    // Practical Example -
+    // Task  - you have to click on images and images got disappeared immediately .
+
+    document.querySelector('#images').addEventListener('click', function(e){   // yaha "click" wala event track kar rahe h
+    //    console.log(e) // if you want to see each events on clicking on images inside ul 
+    //    console.log(e.target)   // kis particular target se Event occur ho raha yahi dekhne ke liye  
+    //   console.log(e.target.parentNode)   // incase  target mil gaya h But aapko Parent ko select karna h 
+
+    //    console.log(e.target.tagName);
+    //     if (e.target.tagName === 'IMG') {
+    //         console.log(e.target.id);
+            let removeIt = e.target.parentNode   // parent ko select karke stoing in a varible 
+            // removeIt.remove()                  // directly remove that img on clickng that  - 
+            /*
+             But ye method use karne ka ek disadvantage h ki - ul ke andar kisi bhi li par click karte hi sabhi li delete ho jayenge 
+             - bcoz aapne img ke jagah li par click kiya jisse uska ParentNode "ul" select ho gaya isiliye pura "ul" hi delete ho gaya 
+            */
+
+           // This is a good way 
+            removeIt.parentNode.removeChild(removeIt) // 2nd method ->  // us li ke parent : ul , ko target karke jis element (whole li element) ko chahenge usko delte kar sakte h
+    //     }
     })
     
     //removeIt.parentNode.removeChild(removeIt)
