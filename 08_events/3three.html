@@ -14,9 +14,34 @@
     const sayDate = function(str){
         console.log(str, Date.now());
     }
+    // setInterval(sayDate, 1000, "hi") 
+    // Run after given time repeatedly , Here in setInterval you can take 3rd parameter also
 
-    const intervalId = setInterval(sayDate, 1000, "hi")
+    //2nd way 
+    // const intervalId = setInterval(sayDate, 1000, "hi")
+    // ye to frequently given time ke interval par execute hota rahega 
 
-    clearInterval(intervalId)
+    // to stop execution - Ruk ja Bro
+    // clearInterval(intervalId)  // passing Reference 
+
+
+     //>> H.W
+    // Assignment : start button par click karte hi Priniting start & stop button par click karte hi printing STOP
+
+    // to start printing 
+    // document.querySelector('#start').addEventListener('click', function(){
+    //     // setInterval(function(str){
+    //     // console.log(Date.now()) }, 2000)
+
+    // })
+   
+
+    // const stopPrint =setInterval(sayName, 2000, "Hello, MD.Shoeb")
+    // document.querySelector('#stop').addEventListener('click', function(){
+    //     clearInterval(stopPrint)
+    //     console.log("STOPPED")
+    // })
+
+
 </script>
 </html>
