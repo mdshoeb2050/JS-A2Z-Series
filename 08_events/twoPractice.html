@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS Practice</title>
+</head>
+<body>
+    <h1>Learning Async concept in JS</h1>
+    <button id="stop">STOP</button>
+
+    <!-- setTimeout, setInterval , clearTimeout, clearTimeINterval ,etc 
+       these are not core JS part , it comes with browser enviorment .
+     
+    ################>>>>>>
+    //>>>>> Basic Terminologies 
+
+    // Handler   -  ek fun jiska Name nahi h - An event handler is a callback to an event the occurred like a mouse click.
+    // CallBack  - Callback function is a function passed into another function as an argument
+    // function  - A JavaScript function is a block of code designed to perform a particular task.
+
+    // fun vs Method - "The javascript method is an object property that has a function value. 
+    //               A function can pass the data that is operated and may return the data.
+    //               The method operates the data contained in a Class."
+    
+    ######################•••••••••••####################
+
+    
+    -->
+</body>
+<script>
+  
+    // setTimeout(function () {
+    //     console.log("Khul ja SimSim");
+    // },3000)  // time in MiliSecond  (3 sec bad Print hoga )
+    //setTimeout :-  It takes a particular amount of time to execute the fun body
+   
+    // 2nd way 
+    const speakFun=function () {
+        console.log("Khul ja SimSim");
+    }
+    // setTimeout(speakFun,3000)
+
+    // real life example 
+    const changeHead= function(){
+        document.querySelector('h1').innerHTML="Best JavaScript Series :)"
+    }
+    // setTimeout(changeHead,2000)
+    //>> Tip : website me jo - popUp , subscribe newsletter ,signup Now , etc me setTimeout use hota h
+
+    const changeMe= setTimeout(changeHead,2000)
+    //clearTimeout(changeMe) // here we passing Reference which you have to clear from Task queue
+    // clearTimeout - bhaiya jitna bhi task queue me callback h ,Sabko jaldi se clear karo upar se Aadesh aaya h
+
+    // kisi ke kam me badha dalna - kam hone se pahle hi Rok dena 
+    // document.querySelector('#stop').addEventListener('click',function(){
+    //     clearTimeout(changeMe)
+    //     console.log("STOPPED");
+    // })
+
+    setInterval()
+    // setInterval - It takes a paticular Breaks after that time it will continue to execute the Body Repeatedly
+
+   // ######################•••••••••••###########################
+
+   
+</script>
+</html>

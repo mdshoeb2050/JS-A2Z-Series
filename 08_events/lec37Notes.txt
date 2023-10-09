@@ -1,0 +1,7 @@
+// Async JavaScript Fundamental 
+
+// JS -> Asynchronous but uska default behaviour :Synchronous hota h 
+
+// Us behaviour ko forcefully bata kr hume Asynchronous banana hota hota
+
+// example -  setTimeout & setInterval 
