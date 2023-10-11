@@ -1,7 +1,7 @@
 //Task - Generate a Random color 
 
 const randColor= function (){
-    // hex value range from 0 to 9 and A -F
+    // taking hex value range from 0 to 9 and A - F
     const hex='0123456789ABCDEF'
     let color = '#'      // taking # bcoz color start with #
     // to make 6 digit number using loop
@@ -33,7 +33,7 @@ const stopChangingColor = function () {
     clearInterval(intervalId);
     // tip : after clearInterval the best practice is to make intervalId is NULL ( dereference)
     // tip : professioalism  - bar bar kisi variable ko override karna thik nahi after use set it as NULL
-    intervalId = null;   // agar varible ka refrence use nahi aa rha to NULL set kar denge so that automatically thodi memory free ho jaye
+    intervalId = null;   // agar varible ka reference use nahi aa rha to NULL set kar denge so that automatically thodi memory free ho jaye
 };
 
 // taking reference of a function 
@@ -44,6 +44,6 @@ document.querySelector('#stop').addEventListener
 ('click', stopChangingColor);
 
 
-// tip : try to fid and Learn  corner case (Edge case)  this will make you a good developer  
+// tip : try to find and Learn  corner case (Edge case)  this will make you a good developer  
 
 //32;05 - second project
