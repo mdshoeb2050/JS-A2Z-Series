@@ -14,16 +14,25 @@
 </body>
 <script>
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
-    xhr.onreadystatechange = function(){
+    const xhr = new XMLHttpRequest();  // it is class we have to make object first using new keyword 
+    xhr.open('GET', requestUrl) 
+    // xhr.send() // now you make a call via send method 
+    // onreadystatechange -> continously monitor  and track the states
+    //  console.log(xhr.readyState); // you can see states in console and track it 
+    xhr.onreadystatechange = function(){  // jaise hi state change hoga har bar fun execute hoga 
         console.log(xhr.readyState);
-        if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText)
-            console.log(typeof data);
+        if (xhr.readyState === 4) {  // detecting states 
+            // we will study more about 'this' in upcoming classes - to talk about curernt context -> use this 
+            const data = JSON.parse(this.responseText)  // converting string format into JSON format 
+            // return me hume response milta h jise hume parse karna hota h JSON format me
+            //  so that hum object ke values ko easily acess kar paye 
+            console.log(typeof data);  // object -> // to see data nature 
             console.log(data.followers);
         }
     }
     xhr.send();
+    
+    // Assignment - 23:20
+    // USing hitesh sir github api URL -  fetch image URL , followers count & make a Card using CSS and Add button 
 </script>
 </html>
