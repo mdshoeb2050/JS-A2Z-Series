@@ -1,60 +1,75 @@
-const promiseOne = new Promise(function(resolve, reject){
+// Promise creation 
+/*
+const promiseOne = new Promise(function(resolve, reject){  // Promise contains aa CallBack  //without storing in a var you can create a Promise
     //Do an async task
     // DB calls, cryptography, network
-    setTimeout(function(){
-        console.log('Async task is compelete');
-        resolve()
+    setTimeout(function(){  // after 1 sec it will get executed 
+        console.log('Async task is complete');
+        resolve()  // connecting resolve method to .then   // task complete hone ke bad hi resolve method chalega aur Promise consumed hoga 
     }, 1000)
 })
 
+// Promise consumption 
+// .then   - direct connection to resolve parameter , And it recive  a CallBack function as a argument 
 promiseOne.then(function(){
     console.log("Promise consumed");
 })
 
-new Promise(function(resolve, reject){
+
+
+new Promise(function(resolve, reject){  // here we are not storing into a variable , we can directly create it 
     setTimeout(function(){
         console.log("Async task 2");
         resolve()
     }, 1000)
 
-}).then(function(){
+}).then(function(){    // incase if  we are not storing into a varible then we can directly attach ".then()" to a promises
     console.log("Async 2 resolved");
 })
 
+
+
 const promiseThree = new Promise(function(resolve, reject){
     setTimeout(function(){
-        resolve({username: "Chai", email: "chai@example.com"})
+        // passing data a parameter via resolve method 
+        resolve({username: "mdShoeb", email: "mdshoeb1024@gmail.com"})  // you can pass - Array , Object , function etc 
     }, 1000)
 })
 
-promiseThree.then(function(user){
+promiseThree.then(function(user){  // here we are considering it user to recieve parameters which had been passed through resolve() method 
     console.log(user);
 })
 
+
+// If you are doing a Task then you have to tell about it success or its failure - resolve , reject 
 const promiseFour = new Promise(function(resolve, reject){
     setTimeout(function(){
-        let error = true
-        if (!error) {
-            resolve({username: "hitesh", password: "123"})
-        } else {
+        let error = true   // error value - true ( else part executed ) , false -> resolve executed
+        if (!error) { // if there is not any error Successfully resolve it 
+            resolve({username: "mdShoeb", password: "12345"})
+        } else {  // if there is Error Reject it ASAP
             reject('ERROR: Something went wrong')
         }
     }, 1000)
 })
-
- promiseFour
+// it it has been successfully resolve it will go through ".then" block otherwise (in case of failure ) go through ".catch" block
+promiseFour
  .then((user) => {
     console.log(user);
     return user.username
-}).then((username) => {
+}).then((username) => {  // chaining of .then  ( jab upar wale then me koi value aati h to wo value yaha is chain se hokar jati h )
     console.log(username);
 }).catch(function(error){
     console.log(error);
-}).finally(() => console.log("The promise is either resolved or rejected"))
+}).finally(() => console.log("The promise is either resolved or rejected"))  // finally be like - jaldi kar bhai , panvel niklana h ( default execute hoga )
+// Tip : using finally we have confirm that our task has been successfully done or fail , but at the end we have to mention it - this is a programmer resposibility 
+
+// How to avoid from CallBack Hell ?   // H.W 
+*/
 
 
 
-const promiseFive = new Promise(function(resolve, reject){
+const promiseFive = new Promise(function(resolve, reject){  // you can use Arrow function here in Promises 
     setTimeout(function(){
         let error = true
         if (!error) {
@@ -76,6 +91,7 @@ async function consumePromiseFive(){
 
 consumePromiseFive()
 
+/*
 // async function getAllUsers(){
 //     try {
 //         const response = await fetch('https://jsonplaceholder.typicode.com/users')
@@ -100,3 +116,6 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 
 // promise.all
 // yes this is also available, kuch reading aap b kro.
+
+
+*/

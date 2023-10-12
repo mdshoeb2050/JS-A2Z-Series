@@ -6,11 +6,11 @@
     <title>Document</title>
 </head>
 <body style="background-color: #212121;">
-    0	UNSENT	Client has been created. open() not called yet.
-1	OPENED	open() has been called.
-2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
-3	LOADING	Downloading; responseText holds partial data.
-4	DONE	The operation is complete.
+        0	UNSENT	            Client has been created. open() not called yet.
+        1	OPENED	            open() has been called.
+        2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+        3	LOADING	            Downloading; responseText holds partial data.
+        4	DONE	            The operation is complete.
 </body>
 <script>
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
@@ -31,6 +31,8 @@
         }
     }
     xhr.send();
+
+    // ####>>>>>> Lecture NOTES link - https://docs.google.com/document/d/1AV2ehWooOFRfWfqSyLFcKuL_iiKG1iD7HiRV7ushYDs/edit?usp=sharing 
     
     // Assignment - 23:20
     // USing hitesh sir github api URL -  fetch image URL , followers count & make a Card using CSS and Add button 

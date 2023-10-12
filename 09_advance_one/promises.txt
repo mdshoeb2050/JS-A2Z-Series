@@ -1,0 +1,63 @@
+// Promises in JS 
+
+// fetch is a very useful and powerful method in JS 
+// first lets understand promises then we will understand "internal working of fetch()"
+
+// Browser Diagram 
+// Networks call
+// Browser APIs
+
+
+# let's understand Promises in Deep 
+>> link -> https://www.w3schools.com/js/js_promise.asp 
+
+# MDN definition
+"The promise object represents the eventual completion (or failiure) of an asynchronous operation and its resulting value."
+
+// It's not necessory to upload videos on daily basis , but i sir have "Promise" then when video will be uploaded you will get a notification soon.
+
+// Its not important All task may be done instantly , some task we have to delegate according to our convinience.
+// crptographic operations , Network operations, file system etc 
+
+
+//  stackOverflow Article link - 
+// >> https://stackoverflow.com/questions/34960886/are-there-still-reasons-to-use-promise-libraries-like-q-or-bluebird-now-that-we#:~:text=Currently%20%2D%20it%20is%20only%20recommended,ES6%20promises%20provide%20the%20basics.
+
+// Jab Promises ka concept nahi tha tab bhi DB exist karta tha And us time hum async & await ka concept use karke kam chalate the .(by default)
+// But when promises concept introduced it has a very useful syntax , easy to understand that's why it became very popular .
+
+// promises libraries - libraries like Q or BlueBird  
+// Now nodejs has given direct acces of these libraries no need to use exeternally 
+// nodejs have native promises 
+
+// Promise Creation 
+// Promise  consumption 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

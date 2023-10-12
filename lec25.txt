@@ -19,5 +19,5 @@ For live demo:
 browser > inspect > Sources
 create a snippet with few functions and visually experience the call stack.
 
-
+>> Google docs Notes - https://docs.google.com/document/d/12n4ekyxO-Jc93xT30-wzRzcFwUz8kpbn8_3NowLDq4g/edit?usp=sharing 
 
