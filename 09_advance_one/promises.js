@@ -65,57 +65,79 @@ promiseFour
 // Tip : using finally we have confirm that our task has been successfully done or fail , but at the end we have to mention it - this is a programmer resposibility 
 
 // How to avoid from CallBack Hell ?   // H.W 
+
 */
 
 
+// const promiseFive = new Promise(function(resolve, reject){  // you can use Arrow function here in Promises 
+//     setTimeout(function(){
+//         let error = true
+//         if (!error) {
+//             resolve({username: "javascript", password: "123"})
+//         } else {
+//             reject('ERROR: JS went wrong')
+//         }
+//     }, 1000)
+// });
 
-const promiseFive = new Promise(function(resolve, reject){  // you can use Arrow function here in Promises 
-    setTimeout(function(){
-        let error = true
-        if (!error) {
-            resolve({username: "javascript", password: "123"})
-        } else {
-            reject('ERROR: JS went wrong')
-        }
-    }, 1000)
-});
 
-async function consumePromiseFive(){
-    try {
-        const response = await promiseFive
-        console.log(response);
-    } catch (error) {
-        console.log(error);
-    }
-}
 
-consumePromiseFive()
+// It's not necessary to always   use  .then or catch , you can handle it using async and await also 
+// below see this example 
 
-/*
+// async , awaits is like - .then or catch   // it takes time to do that task if it successful then no problem , and if any problem occurs then it shows error 
+// async function consumePromiseFive(){   //  in this case ( async , awaits) , you can't handle catch easily 
+//     try {
+//         const response = await promiseFive   // awaits  -> used for recieving ressponse 
+//         console.log(response);
+//     } catch (error) {   // handle errors Gracefully 
+//         console.log(error);
+//     }
+// }
+// Tip : dont forget to use try & catch block  to handle rejection (Errors)
+// Tip : your choice it depends on you what you prefer to use - ( then , catch , finally )
+        // or 2nd method using (try , catch) method 
+// consumePromiseFive()
+
+
+// link -> https://jsonplaceholder.typicode.com/users  ( Just a user containing a lot of users ), you can use github Api if you wish 
+
+
+// fetch () - The fetch() method in JavaScript is used to request data from a server. 
+// The request can be of any type of API that returns the data in JSON or XML. 
+// The fetch() method requires one parameter, the URL to request, and { returns a promise.}
+// fetch tutorial - https://youtu.be/tVQgfKqbX3M?si=2lELCwjrsASjvzV9 
+
+
+// Real life experiment  
 // async function getAllUsers(){
 //     try {
-//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
-
-//         const data = await response.json()
-//         console.log(data);
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')  // it is just a network request takes some time 
+//          // Tip : you can use  checks here to check which kind of data you are fetching from DB
+//         const data = await response.json()  // converting string value  into JSON format  -> here i have used await , bcoz it takes some time to convert into JSON format 
+//         console.log(data);  // printing dummy data 
 //     } catch (error) {
 //         console.log("E: ", error);
 //     }
 // }
 
-//getAllUsers()
+// getAllUsers()
 
-fetch('https://api.github.com/users/hiteshchoudhary')
+
+
+
+// 2nd method to do above work using (.then , catch) using fetch method 
+
+fetch('https://jsonplaceholder.typicode.com/users')
 .then((response) => {
     return response.json()
 })
-.then((data) => {
+.then((data) => {  // to handle response use again .then (chaining of then )  - thenable (generally people say this chaining )
     console.log(data);
 })
 .catch((error) => console.log(error))
 
+
+
 // promise.all
 // yes this is also available, kuch reading aap b kro.
-
-
-*/
