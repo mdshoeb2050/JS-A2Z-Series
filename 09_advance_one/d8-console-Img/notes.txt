@@ -1,0 +1,9 @@
+#console method implementation in C++
+
+#various method which we are using in console 
+
+// console.log
+// console.error
+// console.warn
+// console.info
+// console.debug
