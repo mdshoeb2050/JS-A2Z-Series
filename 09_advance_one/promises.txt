@@ -7,6 +7,14 @@
 // Networks call
 // Browser APIs
 
+#A promise may have one of three states.
+
+Pending
+Fulfilled
+Rejected
+A promise starts in a pending state. That means the process is not complete.
+If the operation is successful, the process ends in a fulfilled state.
+And, if an error occurs, the process ends in a rejected state.
 
 # let's understand Promises in Deep 
 >> link -> https://www.w3schools.com/js/js_promise.asp 
@@ -16,7 +24,7 @@
 
 // It's not necessory to upload videos on daily basis , but i sir have "Promise" then when video will be uploaded you will get a notification soon.
 
-// Its not important All task may be done instantly , some task we have to delegate according to our convinience.
+// Its not important All task may be done instantly , some task we have to delegate according to our convenience.
 // crptographic operations , Network operations, file system etc 
 
 
@@ -24,7 +32,7 @@
 // >> https://stackoverflow.com/questions/34960886/are-there-still-reasons-to-use-promise-libraries-like-q-or-bluebird-now-that-we#:~:text=Currently%20%2D%20it%20is%20only%20recommended,ES6%20promises%20provide%20the%20basics.
 
 // Jab Promises ka concept nahi tha tab bhi DB exist karta tha And us time hum async & await ka concept use karke kam chalate the .(by default)
-// But when promises concept introduced it has a very useful syntax , easy to understand that's why it became very popular .
+// But when promises concept introduced it has a very handly and understable syntax , easy to understand that's why it became very popular .
 
 // promises libraries - libraries like Q or BlueBird  
 // Now nodejs has given direct acces of these libraries no need to use exeternally 
@@ -34,10 +42,20 @@
 // Promise  consumption 
 
 
+JavaScript Promise Methods
+There are various methods available to the Promise object.
 
+Method	                Description
 
-
-
+all(iterable)	        Waits for all promises to be resolved or any one to be rejected
+allSettled(iterable)	Waits until all promises are either resolved or rejected
+any(iterable)	        Returns the promise value as soon as any one of the promises is fulfilled
+race(iterable)	        Wait until any of the promises is resolved or rejected
+reject(reason)	        Returns a new Promise object that is rejected for the given reason
+resolve(value)	        Returns a new Promise object that is resolved with the given value
+catch()	                Appends the rejection handler callback
+then()	                Appends the resolved handler callback
+finally()	            Appends a handler to the promise
 
 
 

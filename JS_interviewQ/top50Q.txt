@@ -1,0 +1,54 @@
+Certainly, here's an extended list of 50 commonly asked interview questions for JavaScript developers:
+
+1. What is JavaScript, and how does it differ from Java?
+2. Explain the difference between `null` and `undefined`.
+3. How do you declare variables in JavaScript (using `var`, `let`, and `const`), and what are the differences between them?
+4. What is the event loop in JavaScript, and how does it work?
+5. What is the purpose of closures in JavaScript, and provide an example?
+6. Explain the concept of "hoisting" in JavaScript.
+7. How does prototypal inheritance work in JavaScript?
+8. What are callbacks and how do they help in asynchronous JavaScript?
+9. What are Promises, and how do they differ from callbacks?
+10. What is the `async/await` syntax, and how does it simplify working with asynchronous code?
+11. What is the purpose of the `this` keyword in JavaScript, and how does it work in different contexts (e.g., in functions, methods, and constructors)?
+12. Explain the concept of "strict mode" in JavaScript.
+13. What is a JavaScript module, and how do you use them?
+14. What is the Document Object Model (DOM), and how can you manipulate it using JavaScript?
+15. What is the difference between `==` and `===` in JavaScript, and why is type coercion a concern?
+16. How can you handle cross-origin requests in JavaScript, and what is CORS?
+17. What are some common design patterns used in JavaScript development (e.g., Singleton, Observer, Module)?
+18. Explain the concepts of "scope" and "context" in JavaScript.
+19. What are the advantages and disadvantages of using frameworks like React, Angular, or Vue.js?
+20. Can you explain the concept of "event delegation" and its use in optimizing event handling in the DOM?
+21. Describe the different ways to create objects in JavaScript.
+22. What is a closure, and what are its use cases?
+23. How does function context change when using the `bind`, `call`, and `apply` methods?
+24. What is the purpose of the `map`, `reduce`, and `filter` functions in JavaScript?
+25. Explain the concept of currying in JavaScript.
+26. How do you avoid callback hell (also known as "Pyramid of Doom") in asynchronous JavaScript?
+27. What is the difference between local and session storage in the browser?
+28. How does variable scoping work in JavaScript, and what is the difference between global and local scope?
+29. What is the purpose of the `Promise.all` method?
+30. What is event bubbling and event capturing in the DOM?
+31. Explain the concepts of "throttling" and "debouncing" in JavaScript.
+32. What are arrow functions, and how do they differ from regular functions?
+33. Describe the differences between function expressions and function declarations.
+34. What is the "prototype" object in JavaScript, and how does it relate to inheritance?
+35. What is the purpose of the `JSON.parse` and `JSON.stringify` methods?
+36. How do you handle errors in JavaScript, and what is the use of the `try...catch` statement?
+37. Explain the concept of "variable shadowing" in JavaScript.
+38. What is the difference between `localStorage` and `sessionStorage`?
+39. How can you optimize the performance of JavaScript code?
+40. What is a callback function, and how is it used in asynchronous programming?
+41. How does the `for...in` loop work, and what are its potential issues?
+42. What is the purpose of the `Object.create` method in JavaScript?
+43. Describe the role of the `prototype` property in object creation.
+44. How do you clone an object in JavaScript?
+45. Explain the principles of function composition and functional programming.
+46. What are "truthy" and "falsy" values in JavaScript?
+47. How does the `localStorage` API differ from cookies for storing data?
+48. What is the difference between a deep copy and a shallow copy of an object?
+49. How do you handle asynchronous code in JavaScript, and what are the best practices?
+50. Describe the key differences between ES6 and ES5 in JavaScript.
+
+These questions cover a wide range of JavaScript concepts and are commonly used by interviewers to assess a candidate's understanding of the language and their problem-solving skills. Remember to be prepared to discuss your practical experience and provide examples of real-world coding scenarios during your interview.
