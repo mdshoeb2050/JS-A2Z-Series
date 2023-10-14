@@ -1,0 +1,10 @@
+mdn reference =>
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming
+
+
+// Programming paradigm - means Programming style  : code likhne ka style (code structure )
+// Prototype in JS ??
+
+// Does JavaScript really have classes?
+
+# Object  - 
