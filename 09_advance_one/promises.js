@@ -146,14 +146,14 @@ as it provides native support for handling asynchronous operations in a more str
 
 // 2nd method to do above work using (.then , catch) using fetch method 
 
-// fetch('https://jsonplaceholder.typicode.com/users')
-// .then((response) => {
-//     return response.json()
-// })
-// .then((data) => {  // to handle response use again .then (chaining of then )  - thenable (generally people say this chaining )
-//     console.log(data);
-// })
-// .catch((error) => console.log(error))
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response) => {
+    return response.json()
+})
+.then((data) => {  // to handle response use again .then (chaining of then )  - thenable (generally people say this chaining )
+    console.log(data);
+})
+.catch((error) => console.log(error))
 
 
 

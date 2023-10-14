@@ -1,0 +1,45 @@
+#fetch in Detail
+
+// Please revise fetch diagram which has been taught in JS engine lecture 
+
+// logrocket fetch in node js - 
+// Read article ->https://blog.logrocket.com/fetch-api-node-js/ 
+
+// MDN Article on fetch - https://developer.mozilla.org/en-US/docs/Web/API/fetch
+// read about more on fetch API -> https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API 
+
+// in 2022 - fetch has come in node js 
+// fetch  override xmlhttprequest 
+
+// AbortController - node me fetch ke through jo request gayi h , usko aap control kar sakte ho
+                   // But browser me aisa nahi h 
+
+
+
+// nodejs ke team member ne - fetch ko include to kiya but ek condition ke sath ki - hum apna khud ka browser based web streama API likhenge 
+
+// fetch interview question and answers - 
+// link - > https://www.hellojavascript.info/docs/additional-questions/network-requests/fetch-api 
+
+
+//A fetch() promise only rejects when a network error is encountered (which is usually when there's a permissions issue or similar). A fetch() promise does not reject on HTTP errors (404, etc.). 
+// Instead, a then() handler must check the Response.ok and/or Response.status properties. 
+
+//(HTTP status code 200)  - this is not an error this is just a response , you will get error if network request fails.
+
+// Micro Task Queue or Priority Queue or fetch queue -> all are same 
+
+// when fetch is executed it invokes two main operations 
+  // 1. reserve a space for varible/fun in memory  , and here it contains two array named - onfulfilled[] (promise resolution), onRejection[] (promise rejection)
+  // 2. handle web browers or native node API  for network request 
+
+  // if network request  will be successful : it goes through : onfulfilled[] (promise resolution) , 404 ERROR 
+  // if network request fail                : it goes through  :  onRejection[] (promise rejection)
+
+  // onfulfilled[] (promise resolution), onRejection[] (promise rejection) - it contains fun as a "parameter" , and it is resposible for fulfil data in memory (the space which you have created in step - 1)
+
+  // after this - data responsibilty is to go and fulfil response in Global Memory ( response variable which you have created in first line )
+
+
+
+
