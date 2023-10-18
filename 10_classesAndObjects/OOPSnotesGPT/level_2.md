@@ -3,7 +3,8 @@
 Object-Oriented Programming (OOP) concepts are fundamental in JavaScript, and they help in structuring and organizing code for better readability, reusability, and maintainability. Here are some key OOP concepts in JavaScript with real-time examples:
 
 1. **Objects:**
-   - In JavaScript, everything is an object or can be represented as an object. Objects are collections of key-value pairs.
+   - In JavaScript, everything is an object or can be represented as an object. 
+   - Objects are collections of key-value pairs.
 
    Example:
 
@@ -20,7 +21,8 @@ Object-Oriented Programming (OOP) concepts are fundamental in JavaScript, and th
    ```
 
 2. **Classes and Constructors:**
-   - Classes provide a blueprint for creating objects. Constructors are special methods that initialize objects created from a class.
+   - Classes provide a blueprint for creating objects. 
+   - Constructors are special methods that { initialize objects created from a class.} - constructor - "neend se jagane ka kam"
 
    Example:
 
@@ -47,14 +49,17 @@ Object-Oriented Programming (OOP) concepts are fundamental in JavaScript, and th
 
    ```javascript
    class BankAccount {
+    // creating a constructor - It initialize objects created from a class.
      constructor(balance) {
        this.balance = balance;
      }
-
+    
+    //Method-1
      deposit(amount) {
        this.balance += amount;
      }
 
+    // Method-2
      withdraw(amount) {
        if (amount <= this.balance) {
          this.balance -= amount;
@@ -64,13 +69,17 @@ Object-Oriented Programming (OOP) concepts are fundamental in JavaScript, and th
      }
    }
 
+   //creating an instance
    const account = new BankAccount(1000);
+   //accessing deposit method
    account.deposit(500);
+  //accessing withdraw method
    account.withdraw(200);
    ```
 
 4. **Inheritance:**
-   - Inheritance allows one class to inherit the properties and methods of another class. It promotes code reusability.
+   - Inheritance allows one class to { inherit the properties and methods of another class} .  
+   - It promotes code reusability. (write once use many times)
 
    Example:
 
@@ -79,18 +88,21 @@ Object-Oriented Programming (OOP) concepts are fundamental in JavaScript, and th
      constructor(name) {
        this.name = name;
      }
-
+    
+    // creating a speak() method in Animal class 
      speak() {
        console.log(`${this.name} makes a sound.`);
      }
    }
 
    class Dog extends Animal {
+    // creating a speak() method in Dog class 
      speak() {
        console.log(`${this.name} barks.`);
      }
    }
 
+  // creating an instance 
    const dog = new Dog('Buddy');
    dog.speak(); // Output: "Buddy barks."
    ```

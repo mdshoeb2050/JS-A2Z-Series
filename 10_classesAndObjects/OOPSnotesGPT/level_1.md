@@ -21,7 +21,7 @@ cat.speak(); // Output: Cat makes a sound.
 
 This class syntax provides a way to create constructor functions, define methods, and handle inheritance more easily than the previous prototype-based approach. However, it's important to note that under the hood, JavaScript's classes are still based on prototypes, and they provide syntactic sugar for the existing prototype system.
 
-So, while JavaScript's class syntax may look similar to class-based languages, it's important to remember that JavaScript is fundamentally a prototype-based language, and classes are just a more convenient way to work with prototypes.
+So, while JavaScript's class syntax may look similar to class-based languages, it's important to remember that { JavaScript is fundamentally a prototype-based language,  } and classes are just a more convenient way to work with prototypes.
 
 
 # Explain classes and objects in javascript?
@@ -95,7 +95,7 @@ In JavaScript, classes and objects are fundamental concepts used for organizing 
 In summary, objects represent specific instances of data, while classes define blueprints for creating and organizing objects in a structured manner. Classes help promote modularity, encapsulation, and inheritance in your JavaScript code.
 
 
-
+****
 # explain constructors in javascript with code ?
 
 Constructors in JavaScript are special functions used to create and initialize objects. They serve as blueprints for creating new instances of objects with shared properties and methods. Constructors are typically named with an initial capital letter to distinguish them from regular functions. You can create your own custom constructors to define the structure and behavior of objects.
@@ -139,13 +139,16 @@ Constructors are a fundamental part of JavaScript's object-oriented programming 
 
 # what is prototype in javascript ?
 
-In JavaScript, the **prototype** is an essential part of the language's object-oriented programming model. Every object in JavaScript has a prototype, which is another object. The prototype object is used for inheritance, allowing objects to inherit properties and methods from their prototypes. Understanding prototypes is fundamental to working with JavaScript's object system.
+In JavaScript, the **prototype** is an essential part of the language's object-oriented programming model. 
+=> Every object in JavaScript has a prototype, which is another object. The prototype object is used for inheritance, { allowing objects to inherit properties and methods from their prototypes.}
+=> Understanding prototypes is fundamental to working with JavaScript's object system.
 
 Here are some key points to understand about prototypes in JavaScript:
 
 1. **Prototype Chain:**
    - Each object in JavaScript has a prototype, and these prototypes are organized into a chain known as the "prototype chain."
-   - When you access a property or method on an object, JavaScript first looks for it on the object itself. If it doesn't find it, it continues searching up the prototype chain until it either finds the property or reaches the end of the chain.
+   - When you access a property or method on an object, JavaScript first looks for it on the object itself. 
+   - If it doesn't find it, it continues searching up the prototype chain until it either finds the property or reaches the end of the chain.
 
 2. **`prototype` Property:**
    - Every function in JavaScript has a `prototype` property, and this property is used to set the prototype for objects created using that function as a constructor. For example, when you create objects with a constructor function, they inherit from the constructor's prototype.
@@ -257,4 +260,5 @@ In this code:
 
 By following this approach, `Student` objects inherit properties and methods from both `Student` and `Person` prototypes, forming a prototype chain.
 
+Important Note :-
 This demonstrates how prototypes in JavaScript allow for efficient code reuse, inheritance, and the creation of complex object hierarchies. It's a powerful mechanism to design and structure code in a way that is both flexible and efficient.

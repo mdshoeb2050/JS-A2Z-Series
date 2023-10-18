@@ -4,9 +4,9 @@
 
 ## Object
 - collection of properties and methods
-- toLowerCase
+- eg - toLowerCase
 
-## why use OOP
+## why use OOP ?
 
 ## parts of OOP
 Object literal 

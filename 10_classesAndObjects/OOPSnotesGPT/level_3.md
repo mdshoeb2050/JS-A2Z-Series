@@ -250,9 +250,12 @@ class Account {
 Now, you want to create specific types of accounts, such as `SavingsAccount` and `CheckingAccount`, that inherit the properties and methods of the `Account` class. You can do this by extending the `Account` class.
 
 ```javascript
+// creating SavingsAccount with the help of Account class
 class SavingsAccount extends Account {
   constructor(accountNumber, accountHolder, balance, interestRate) {
     super(accountNumber, accountHolder, balance);
+    // here we explicitly create interestRate , bcoz in Account super class we only declare 
+    // only 3 elements - (accountNumber, accountHolder, balance )
     this.interestRate = interestRate;
   }
 
@@ -262,6 +265,7 @@ class SavingsAccount extends Account {
   }
 }
 
+// creating CheckingAccount with the help of Account class
 class CheckingAccount extends Account {
   constructor(accountNumber, accountHolder, balance, overdraftLimit) {
     super(accountNumber, accountHolder, balance);
@@ -290,6 +294,8 @@ const checkingAccount = new CheckingAccount("CA456", "Bob", 500, 200);
 checkingAccount.withdraw(600);
 ```
 
-Inheritance in JavaScript promotes code reuse and a hierarchical organization of classes, allowing you to create more specialized classes while reusing the common functionality defined in the parent class. It is a powerful concept for structuring and organizing code, especially in scenarios where objects have a clear hierarchical relationship.
+Inheritance in JavaScript promotes { code reusability and a hierarchical organization of classes} 
+ -  allowing you to create more specialized classes while reusing the common functionality defined in the parent class. 
+- It is a powerful concept for structuring and organizing code, especially in scenarios where objects have a clear hierarchical relationship.
 
 

@@ -32,16 +32,17 @@ Inside a constructor function or a method of an object,
 
 
 /*
-  Constructors in JavaScript are special functions used to create and initialize objects. 
+  Constructors in JavaScript are special functions used to { create and initialize objects. }  
   They serve as blueprints for creating new instances of objects with shared properties and methods. 
   Constructors are typically named with an initial capital letter to distinguish them from regular functions. 
-  You can create your own custom constructors to define the structure and behavior of objects.
+
+  Tip: You can create your own custom constructors to define the structure and behavior of objects.
 */
 
-// const promiseOne = new Promise(); // each time we need new context in memory we dont like to use old context of others 
+// const promiseOne = new Promise(); // each time we need new context in memory,  we dont like to use old context of others 
 // const date  = new Date(); // creating new context in memory using constructor method (new)
 
-// here we are declaring a fun to 
+// here we are declaring a fun 
 function User(username, loginCount, isLoggedIn){
     this.username = username;
     this.loginCount = loginCount;
@@ -95,7 +96,7 @@ User { username: 'ChaiAurCode', loginCount: 11, isLoggedIn: false }
 
 // instanceof in javascript 
 /*
-  The instanceof operator in JavaScript is used to check the type of an object at run time. 
+  The instanceof operator in JavaScript is used to check the { type of an object at run time.} 
   It returns a boolean value if true then it indicates that the object is an instance of a particular class and if false then it is not. 
 */
 
