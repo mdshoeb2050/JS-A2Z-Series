@@ -17,11 +17,15 @@ Here's the JavaScript code:
     </div>
 
     <script>
+        // my YT API key - AIzaSyBo-tDLiXVMrusY49k1gstXa3zo5Nyc0kg
+
+
         // Replace 'YOUR_API_KEY' with your actual YouTube Data API key
-        const apiKey = 'YOUR_API_KEY';
+        const apiKey = 'AIzaSyBo-tDLiXVMrusY49k1gstXa3zo5Nyc0kg';
 
         // Replace 'VIDEO_ID' with the ID of the video you want to retrieve details for
-        const videoId = 'VIDEO_ID';
+        // const videoId = 'VIDEO_ID';
+        const videoId = 'nGhKIC_7Mkk';
 
         // Create a function to fetch video details
         function fetchVideoDetails() {
