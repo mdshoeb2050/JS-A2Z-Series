@@ -18,7 +18,7 @@ function sayMyName(){
 function addTwoNumbers(number1, number2){
     // checking correct parameter in fun definition is Programmer responsibility
 
-    // let result = number1 + number2     // result  - local Scope 
+    // let result = number1 + number2     // result  -> local Scope 
     // return result
 
      /* Function must have return a value  hence function return control & value */
@@ -52,14 +52,14 @@ function loginUserMessage(username ){
 
 function loginUserMessage2(username = "pappu"){   // here  "pappu" is a default value (parameter) when user does'nt pass any argument in that case this default value pass to the function
     // if(username == undefined){
-    //     console.log("PLease enter a username");
+    //     console.log("Please enter a username");
     //     return
     // }
 
     //or  using logical not operator we can evaluate 
 
     if(!username){
-        console.log("PLease enter a username");
+        console.log("Please enter a username");
         return
     }
     return `${username} just logged in`

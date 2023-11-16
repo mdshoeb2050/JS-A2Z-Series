@@ -1,13 +1,13 @@
 let score = "ShoebAnsari"
 
-//console.log(typeof score);
+// console.log(typeof score);
 
 
 //console.log(typeof(score));  //second method using small brackets
 
 let valueInNumber = Number(score)
-//console.log(typeof valueInNumber);
-//console.log(valueInNumber);
+// console.log(typeof valueInNumber);
+// console.log(valueInNumber);
 
 
 // "33" => 33

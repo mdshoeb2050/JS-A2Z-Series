@@ -70,8 +70,8 @@ fruits="Apple, Banana, blackberry, grapes"
 // String substr()
 /* substr() is similar to slice().
 The difference is that the  (second parameter) specifies the {length of the extracted part.} */
-// console.log(fruits.substr(7,6));   //Banana  - lenght : 6
-// console.log(fruits.substr(15,10)); //blackberry - lenght : 10
+// console.log(fruits.substr(7,6));   //Banana  - length : 6
+// console.log(fruits.substr(15,10)); //blackberry - length : 10
 
 
 
@@ -114,6 +114,7 @@ let newText = text3.replace(/MICROSOFT/i, "foclearning");
 let text5 = " Cats are very easy to love. Cats are very popular";
 let ans =text5.replaceAll(/cats/g,"dogs")
 // console.log(ans); // cats -> dogs  (if not found then not replace)
+//Cats are very easy to love. Cats are very popular
 
 let ans2=text5.replaceAll(/Cats/g,"Dogs")
 // console.log(ans2); // Cats -> Dogs   // Dogs are very easy to love. Dogs are very popular
@@ -134,8 +135,8 @@ let user3="SHOEBANSARI IS A GOOD BOY"
 
 let text1 = "Hello";
 let text2 = "World";
-let result = text1.concat(" ", text2);
-// console.log(result); //Hello World
+let result = text1.concat(" ", text2); // " " it means there will be space between texts
+console.log(result); //Hello World
 
 /*
 The concat() method can be used instead of the plus operator. These two lines do the same:
@@ -268,12 +269,13 @@ myArray2 = text.split("");
 // console.log(myArray2);
 /*
     [
-    'a', ',', 'b', ',',
-    'c', ',', 'd', ',',
-    'e', ',', 'f'
+    'a', ',', 'b', ',' , 'c', ',', 'd', ',', 'e', ',', 'f'
    ]
 */
+// console.log(myArray2[2])  // b
 
 myArray2 = text.split();
 // If the separator is ""(empty), the returned array will be an array of single characters:
 // console.log(myArray2); //[ 'a,b,c,d,e,f' ]
+
+// console.log(myArray2[0])   //a,b,c,d,e,f
