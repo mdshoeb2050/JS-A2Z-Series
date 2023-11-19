@@ -2,7 +2,6 @@
 
 // switch (key) {
 //     case value:
-        
 //         break;
 
 //     default:
@@ -37,7 +36,7 @@ switch (month) {
         break;
 }
 
-// using numbers in switch
+// using numbers in switch case
 
 // const month = 3
 switch (month) {
