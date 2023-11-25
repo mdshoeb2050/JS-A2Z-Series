@@ -44,7 +44,7 @@ let lastName = "Doe";
 
 text = `Welcome ${firstName}, ${lastName}!`;
 
-// Automatic replacing of variables with real values is called string interpolation.
+//NOTE => Automatic replacing of variables with real values is called string interpolation.
 
 
 //Expression Substitution

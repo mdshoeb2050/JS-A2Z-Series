@@ -2,21 +2,21 @@
 
 // String length
 // String slice()
-// String substring()
-// String substr()
-// String replace()
-// String replaceAll()
+// String substring() :  -ve value treated as 0
+// String substr()    : (second parameter) specifies the {length of the extracted part.} 
+// String replace()   : replaces { only the first match }
+// String replaceAll() : replace all matches using Regular expression (Regex)
 // String toUpperCase()
 // String toLowerCase()
 // String concat()
-// String trim()
+// String trim()    : remove whitespace 
 // String trimStart()
 // String trimEnd()
 // String padStart()
 // String padEnd()
 // String charAt()
-// String charCodeAt()
-// String split()
+// String charCodeAt() :returns the {unicode of the character}
+// String split()      :   A string can be converted to an array with the split() method:
 
 
 // String length
@@ -35,43 +35,53 @@ let part = fruits.slice(7,13);
 // console.log(part); // Banana
 
 
-/* If you omit the second parameter, 
-the method will slice out the rest of the string: */
+/* NOTE =>
+    If you omit the second parameter, 
+    the method will slice out the rest of the string.
+*/
 
-let part2 = fruits.slice(7);
+let part2 = fruits.slice(7); // 2nd parameter is missing here 
 // console.log(part2);  //Banana, blackberry, grapes
 
 
-// Note - If a parameter is negative, the position is counted from the end of the string.
+// Note - If a parameter is negative, the position is counted from the "End of the string".
 
 let user="shoebAnsari"
 // let part3= user.slice(-6)  // given  index se  pura substring print kar dega end tak
 // console.log(part3);  //Ansari
 
 let text = "Apple, Banana, Kiwi";
-let part4 = text.slice(-12, -6);
+let part4 = text.slice(-12, -6); // from end we will go to -12 index (B) , start printing and stopped at -5 index (a) , -6 index will not included
 // console.log(part4);  // Banana
+let part5 = text.slice(-12, 6);  // empty string
 
 
 // substring()
-/* substring() is similar to slice(). 
-The difference is that start and end values less than 0 {Negative value } 
-then  -> those values treated as 0 in substring() */
+/* 
+    substring() is similar to slice(). 
+    The difference is that start and end values less than 0 {Negative value } 
+    then  -> those values treated as 0 in substring() 
+*/
 
 fruits="Apple, Banana, blackberry, grapes"
 // console.log(fruits.substring(7,13));  //Banana
-// console.log(fruits.substring(-1,6));  // -ve value treated as 0 [0-6] --> Apple,   {Interview Q}
+// console.log(fruits.substring(-1,6));  // -ve value treated as 0 [0-6] --> Apple,   { Interview Q }
 
-// Note - If you omit the second parameter, substring() will slice out the rest of the string.
+// Note => If you omit the second parameter, substring() will slice out the rest of the string.
 // console.log(fruits.substring(7));  //Banana, blackberry, grapes
 
 
 
 // String substr()
-/* substr() is similar to slice().
-The difference is that the  (second parameter) specifies the {length of the extracted part.} */
+
+/* 
+    substr() is similar to slice().
+    The difference is that the  (second parameter) specifies the {length of the extracted part.} 
+*/
+
 // console.log(fruits.substr(7,6));   //Banana  - length : 6
-// console.log(fruits.substr(15,10)); //blackberry - length : 10
+// console.log(fruits.substr(15,10));  // blackberry - length : 10   
+//explanation : start traversing  from 15 index and extract string of length 10 
 
 
 
@@ -83,25 +93,28 @@ let word = sentence.replace("Microsoft", "foclearning");
 // console.log(word);  //Please visit foclearning
 
 /*
-Note
-The replace() method  { does not change the string}  it is called on.
+NOTE =>
+>> The replace() method  { does not change the string}  it is called on.
 >> The replace() method returns a new string.
 The replace() method replaces { only the first match }
 
 If you want to replace all matches, use a {Regular expression} with the /g flag set. See examples below.
- */
+*/
+
 sentence = "Please visit Microsoft, and again here Microsoft ";
 let word2 = sentence.replace(/Microsoft/g, "foclearning");
 // console.log(word2);  //Please visit foclearning, and again here foclearning 
 
 
 // To replace {Case insensitive}, use a regular expression with an /i flag (insensitive)
-//Note -> Regular expressions are written without quotes. -> /MICROSOFT/i , /Microsoft/g
+// Note => Regular expressions are written without quotes. -> /MICROSOFT/i , /Microsoft/g
 let text3 = "Please visit Microsoft";
 let newText = text3.replace(/MICROSOFT/i, "foclearning"); 
 // console.log(newText); //Please visit foclearning
 
-/* we  will learn a lot more about regular expressions in the chapter JavaScript Regular Expressions. */
+/* 
+NOTE =>  we  will learn a lot more about regular expressions in the chapter JavaScript Regular Expressions. 
+*/
 
 
 
@@ -136,20 +149,20 @@ let user3="SHOEBANSARI IS A GOOD BOY"
 let text1 = "Hello";
 let text2 = "World";
 let result = text1.concat(" ", text2); // " " it means there will be space between texts
-console.log(result); //Hello World
+// console.log(result); //Hello World
 
 /*
 The concat() method can be used instead of the plus operator. These two lines do the same:
-text = "Hello" + " " + "World!";
-text = "Hello".concat(" ", "World!");
+text = "Hello" + " " + "World!";       //Hello World
+text = "Hello".concat(" ", "World!"); //Hello World
 */
 
 /*
-Note -> 
-All string methods return a new string. They {don't modify the original string.}
+Note => 
+        All string methods return a new string. They {don't modify the original string.}
 
-Formally said:
-Strings are immutable: Strings cannot be changed, only replaced. 
+        ~Formally said:
+        Strings are immutable: Strings cannot be changed, only replaced. 
 */
 
 // String trim()
@@ -159,7 +172,7 @@ Strings are immutable: Strings cannot be changed, only replaced.
  text2 = text1.trim();
 //  console.log(text2); //Hello Motto!
 
-// Note -> 
+// Note => 
 // ECMAScript 2019 added the String method trimStart() to JavaScript.
 // The trimStart() method works like trim(), but removes whitespace only from the start of a string.
 
@@ -172,30 +185,31 @@ text2=text1.trimEnd()
 
 
 // String padStart()
+
 // The padStart() method pads a string from the start.
 // It pads a string with another string (multiple times) until it reaches a given length.
 
 // Pad a string with "0" until it reaches the length 4:
 text = "5";
-let padded = text.padStart(4,"0"); // 0 laga ke starting me 4 length ka string bana dega
+let padded = text.padStart(4,"0"); // 0 laga ke starting me 5 ke , 4 length ka string bana dega
 // console.log(padded); //0005
 
 text = "5";  
-padded = text.padStart(6,"x"); //xxxxx5
+padded = text.padStart(6,"x"); //xxxxx5  , x laga ke 6 length ka ban gaya
 // console.log(padded); 
 
 /*
-Note
-The padStart() method is a string method.
+~Note=>
+    The padStart() method is a string method.
 
-To pad a number, convert the number to a string first.
+    >>> To pad a number, convert the number to a string first.
 */
 let num=7;
 let txt = num.toString();
 padded = txt.padStart(8,"0");
 // console.log(padded);  //00000007
 
-/* NOTE - padStart() is not supported in Internet Explorer. */
+/* NOTE :  padStart() is not supported in Internet Explorer. */
 
 /*
 String padEnd()
@@ -231,27 +245,27 @@ text = "HELLO MOTTO";
 
 /*
 Note:-  {Interview Q }
-Property access might be a little unpredictable:
-It makes strings look like arrays (but they are not)
-If no character is found, [ ] returns undefined, while charAt() returns an empty string.
-It is read only. str[0] = "A" gives no error (but does not work!)
+        Property access might be a little unpredictable:
+        It makes strings look like arrays (but they are not)
+        If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+        It is read only. str[0] = "A" gives no error (but does not work!)
 */
 // console.log(text[16]); //undefined
-// console.log(text.charAt(13)); // blank ( empty string)
+// console.log(text.charAt(13)); // blank ( Empty string)
 
 
 text = "HELLO WORLD";
-text[0] = "A";    // Gives no error, but does not work
+text[0] = "A";    // Will Give no error, but does not work
 // console.log(text); //HELLO WORLD 
 
 
 /*
-NOTE ->
-Converting a String to an Array
-If you want to work with a string as an array, you can convert it to an array.
+NOTE =>
+    Converting a String to an Array
+    If you want to work with a string as an array, you can convert it to an array.
 
-String split()
-A string can be converted to an array with the split() method:
+    String split()
+    A string can be converted to an array with the split() method:
 
 text.split(",")    // Split on commas
 text.split(" ")    // Split on spaces
@@ -263,7 +277,6 @@ const myArray = text.split(",");
 // console.log(myArray); //[ 'a', 'b', 'c', 'd', 'e', 'f' ]
 
 
-//If the separator is omitted, the returned array will contain the whole string in index [0].
 
 myArray2 = text.split("");
 // console.log(myArray2);
@@ -274,8 +287,10 @@ myArray2 = text.split("");
 */
 // console.log(myArray2[2])  // b
 
+
+//If the separator is omitted, the returned array will contain the whole string in index [0].
 myArray2 = text.split();
 // If the separator is ""(empty), the returned array will be an array of single characters:
 // console.log(myArray2); //[ 'a,b,c,d,e,f' ]
 
-// console.log(myArray2[0])   //a,b,c,d,e,f
+// console.log(myArray2[0])   // a,b,c,d,e,f

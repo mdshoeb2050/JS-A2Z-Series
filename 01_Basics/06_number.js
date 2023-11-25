@@ -7,22 +7,22 @@
 // >> { Extra large or extra small } numbers can be written with scientific (exponent) notation:
 
 // let a = 123e5;    // eN  :  N 0's after number or multiply by 10 power 5  =>  12300000  
-// let b = 123e-5;   // e-N : Divide by 10 oer 5 =>  0.00123
+// let b = 123e-5;   // e-N :  Divide by 10 power 5 ~ 100000 =>  0.00123
 
 
 /*
-JavaScript Numbers are Always 64-bit Floating Point
-> Unlike many other programming languages, JavaScript does not define different types of numbers, like integers, short, long, floating-point etc.
+    JavaScript Numbers are Always 64-bit Floating Point
+    > Unlike many other programming languages, JavaScript does not define different types of numbers, like integers, short, long, floating-point etc.
 
-> JavaScript numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard.
+    > JavaScript numbers are { always stored as double precision floating point numbers}, following the international IEEE 754 standard.
 
-> This format stores numbers in 64 bits, where 
-    # the number (the fraction) is stored in bits 0 to 51
-    # the exponent in bits 52 to 62
-    #  and the sign in bit 63:
+    > This format stores numbers in 64 bits, where 
+        # the number (the fraction) is stored in bits 0 to 51
+        # the exponent in bits 52 to 62
+        #  and the sign in bit 63:
 
-Value (aka Fraction/Mantissa)	  Exponent	            Sign
-52 bits (0 - 51) 	            11 bits (52 - 62)	  1 bit (63)
+    Value (aka Fraction/Mantissa)	  Exponent	            Sign
+    52 bits (0 - 51) 	            11 bits (52 - 62)	  1 bit (63)
 
 */
 
@@ -45,7 +45,7 @@ let n = 0.2 + 0.1;
 // console.log("The value of n is :", n); //0.30000000000000004
 
 
-//To solve the problem above, it helps to multiply and divide:
+//   NOTE => To solve the problem above, it helps to multiply and divide:
 
 n = (0.2 * 10 + 0.1 * 10) / 10;
 // console.log(n); // 0.3
@@ -55,8 +55,8 @@ n = (0.2 * 10 + 0.1 * 10) / 10;
     Adding Numbers and Strings
     WARNING !!
     JavaScript uses the + operator for both addition and concatenation.
-   #Numbers are added.
-   #Strings are concatenated.
+      ~ Numbers are added.
+      ~ Strings are concatenated.
 */
 
 /*
@@ -82,7 +82,7 @@ let z = x + y;  //1020
 
 
 /*
-If you add a number and a string, the result will be a string concatenation:
+If you add a string  and a number, the result will be a string concatenation:
 let x = "10";
 let y = 20;
 let z = x + y;  //1020
@@ -95,7 +95,7 @@ Tip : - A common mistake is to expect this result to be 30:
 /*
  x = 10;
  y = 20;
-let z = "The result is: " + x + y;
+let z = "The result is: " + x + y;    // bcoz here 1st part contains string hence , concatenation will happen here
 console.log(z);  // The result is: 1020
 */
 
@@ -126,7 +126,7 @@ let y = "100";       // y is a string
 
 
 /*
-JavaScript will try to convert strings to numbers in all numeric operations:
+JavaScript will try to convert : {strings to numbers} in all numeric operations:
 
  x = "100";
  y = "10";
@@ -140,40 +140,40 @@ JavaScript will try to convert strings to numbers in all numeric operations:
  console.log(z); //1000
 
 
+this will also work -
 
- this will also work -
-x = "100";
+x = 100;
 y = "10";
 z = x / y;
-console.log(z);  //10
+console.log(z);  /*10 */
 
 x = "100";
 y = 10;
 z = x / y;
-console.log(z);  //10
+// console.log(z);  /*10 */
 
 
 x = "100";
 y = "10";
 z = x - y;
-console.log(z);  //90
+// console.log(z);  /*90 */
 
 
-
-But this will not work  "100" + "10" = 110  - Wrong Output 
+/*
+But this will not work  "100" + "10" = 110  :  Wrong Output 
 
 x = "100";
 y = "10";
 z = x + y;
 console.log(z);   // 10010
 
-In this  example JavaScript uses the + operator to concatenate the strings.
+~NOTE  : In this  example JavaScript uses the + operator to concatenate the strings.
 
 */
 
 
 //NaN - Not a Number
-// NaN is a JavaScript reserved word indicating that a number is not a legal number.
+// NaN is a JavaScript reserved word indicating that a number is { not a legal number.}
 
 // Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
 
@@ -182,14 +182,14 @@ let n1 = 100 / "Apple";
 
 //  console.log(n1); // NaN
 
-//  However, if the string is numeric, the result will be a number:
-
+// NOTE :  However, if the string is numeric, the result will be a number:
+// example -
 let x2 = 100 / "10";
 // console.log(x2); //10
 
 
 /*
-You can use the global JavaScript function isNaN() to find out if a value is a not a number:
+You can use the global JavaScript function isNaN() to check  if a value is a number or Not a number:
 
 Example
 x = 100 / "Apple";
@@ -206,7 +206,7 @@ let z = x + y; //NaN
 
 
 let x = NaN;
-let y = "5";
+let y = "5"; // numeric string
 let z = x + y; //NaN5
 
 
@@ -218,8 +218,9 @@ console.log(typeof NaN); //number
 */
 
 /*
-Infinity
-Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+// Infinity
+
+~ Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
 
 Example
 let myNumber = 2;
@@ -240,21 +241,24 @@ while (myNumber != Infinity) {
 Infinity
  */
 
+
 /*
-Division by 0 (zero) also generates Infinity:
+~NOTE : Division by 0 (zero) also generates Infinity:
 
 Example
-let x =  2 / 0;
-let y = -2 / 0;
+let x =  2 / 0;  //Infinity
+let y = -2 / 0;  // -Infinity
  */
 
-/*
-Infinity is a number: typeof Infinity returns number.
 
-Example
+/*
+~ Infinity is a number: typeof Infinity returns number.
+
+-Example
 console.log(typeof Infinity); //number 
 
 */
+
 
 /*
 Hexadecimal
@@ -318,8 +322,8 @@ Example
 
 let x1 = 123;
 let y1 = new Number(123);
-// console.log(x1);  //123 - number 
-// console.log(y1);  //[Number: 123]  - object
+// console.log(x1);  //123 :  number 
+// console.log(y1);  //[Number: 123]  : object
 
 
 /*
@@ -362,12 +366,12 @@ console.log(x==y); //false
 
 console.log(x===y); //false
 
-//Note -> Comparing two JavaScript objects always returns false.
+// ~ Note => Comparing two JavaScript objects always returns false.
 
 
 
 Comparing two objects like this results in false even if they have the same data. 
-It is because those are two different object instances,
+It is because those are two { different object instances,}
 they are referring to two different objects.
 There is no direct method in javascript to check whether two objects have the same data or not.
 

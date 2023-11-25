@@ -1,9 +1,9 @@
-// In today class we will learn string & their operatoins 
+// In today class we will learn string & their operations
 
 const name = "shoeb"
 const repoCount = 16
 
-// console.log(name + repoCount + " 16 repo pushed on github");
+console.log(name +" "+repoCount + "Repo have pushed on github");
 
 // literal method (inside backtick)
 // console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
@@ -27,7 +27,7 @@ const anotherString = gameName.slice(1, 5)
 // console.log(anotherString);  // all-
 
 const anotherString2 = gameName.slice(-3, 5)
-// console.log(anotherString2);   // empty string 
+console.log(anotherString2);   // empty string 
 
 const newStringOne = "  mdshoeb    "
 // console.log(newStringOne);           // as it is print with white spaces 

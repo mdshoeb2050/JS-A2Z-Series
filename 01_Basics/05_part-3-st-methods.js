@@ -1,20 +1,20 @@
 // String Search Methods
 
-// String indexOf()
-// String lastIndexOf()
-// String search()
-// String match()
-// String matchAll()
-// String includes()
+// String indexOf()   : index of first occurrence of a string 
+// String lastIndexOf() : index of {last occurrence} of a specified text in a string.
+// String search()      : for finding powerful search values (Regex) ->   use search() method
+// String match()       : returns an array containing the results of matching a string against a string (or a regular expression).
+// String matchAll() 
+// String includes()    : true / false 
 // String startsWith()
 // String endsWith()
 
 
 // String indexOf()
-// The indexOf() method returns the index (position) the {first occurrence} of a string in a string:
+// The indexOf() method returns the index (position) of  the {first occurrence} of a string in a string:
 let text = "Please locate where 'locate' occurs!";
 let index = text.indexOf("locate");
-// console.log(index); // 7   target string starting with index - 7
+// console.log(index); // 7   target string starting with index : 7
 
 /*
 JavaScript counts positions from zero.
@@ -27,16 +27,19 @@ text = "Please locate where 'locate' occurs!";
 let lastIndex = text.lastIndexOf("locate");
 // console.log(lastIndex);  //21 
 
-/* NOTE : Both indexOf(), and lastIndexOf() return -1 if the text is not found. */
+/*   
+   NOTE :-  
+      Both indexOf(), and lastIndexOf() return -1 if the text is not found. 
+*/
 
 
 // String search()
 // The search() method searches a string for a string 
-// (or a regular expression) and returns the position of the match:
+// (or a regular expression) and returns the position of the match.
 text = "Please locate where 'locate' occurs!";
 // console.log(text.search("locate")); //7 
 
-// console.log(text.search(/locate/));
+// console.log(text.search(/locate/));     //regular expression
 
 /*
 Did You Notice?
@@ -44,15 +47,17 @@ The two methods, indexOf() and search(), are equal?
 They accept the same arguments (parameters), and return the same value?
 
 The two methods are NOT equal. These are the differences:
-The search() method can not take a second start position argument.
-The indexOf() method can not take powerful search values (regular expressions).
+    >>The search() method can't take a second start position argument.
+    >>The indexOf() method can't take powerful search values (regular expressions).
 
-for finding powerful search values - we will prefer to use search() method
+==> NOTE ==>
+for finding powerful search values ->  we will prefer to use search() method
 
 */
 
 
-//String match()
+// String match()
+
 /*
 The match() method returns an array containing the results of matching a string
 against a string (or a regular expression).
@@ -69,8 +74,11 @@ text = "The rain in SPAIN stays mainly in the plain";
 */
 
 const myArr = text.match(/ain/);
+// console.log(myArr); // 'ain',index: 5,
 // console.log(myArr.length + " " + myArr); //1 ain
 
+
+// ===> NOTE===>
 // Perform a global search for "ain":
 text = "The rain in SPAIN stays mainly in the plain";
 // console.log(text.match(/ain/g)); //[ 'ain', 'ain', 'ain' ]
@@ -88,7 +96,7 @@ containing the {results of matching a string} against a string (or a regular exp
 */
 text = "I love cats. Cats are very easy to love. Cats are very popular.Cats are cute"
 const iterator =text.matchAll("Cats")
-// console.log(Array.from(iterator));
+console.log(Array.from(iterator));
 /*
      'Cats',
     index: 13, 
@@ -134,7 +142,7 @@ text = "Hello world, welcome to the universe.";
 
 //A start position for the search can be specified:
 text = "Hello world, welcome to the universe.";
-// console.log(text.startsWith("world", 6));  //true
+// console.log(text.startsWith("world", 6));  //true   // Bcoz 'world' starting from 6th index
 
 /*
 startsWith() is case sensitive, an ES6 feature & NOT supported in Internet Explorer. 
