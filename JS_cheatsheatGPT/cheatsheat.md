@@ -41,7 +41,9 @@ Certainly! Here's a comprehensive JavaScript cheatsheet to help you prepare for 
    - ES6 introduced `class` for creating classes.
    - Constructors, methods, and static methods.
 
-**Advanced JavaScript:**
+
+
+# Advanced JavaScript:
 
 8. **Closures:**
    - A function that remembers its lexical scope, even when called outside that scope.
