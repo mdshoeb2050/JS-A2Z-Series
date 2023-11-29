@@ -250,3 +250,14 @@ arr6.unshift(8);   // starting index (0) par jakar 8 set ho jayega sabko 1 shift
 [ 5, 6, 7 ]   
 [ 8, 5, 6, 7 ]]
  */
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Splice function
+
+
+
+
+
+
+
+//>>>>>>>>>>>>>>>>>>>>>>> Iterating over Arrays 
