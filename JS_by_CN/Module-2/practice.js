@@ -1,3 +1,4 @@
+// Fucntion
 function sum(a, b){
     return a+b;
 }
@@ -118,11 +119,11 @@ var factorial = function fact2(n){
         ans = ans*i;
     }
     return ans;
-};  // don't forget to terminate the statement
+};  // don't forget to terminate the statement (semicolon ; )
 
 // calling fun via fun expression name 
 console.log(factorial(5));  // 120
-console.log(factorial);  // fun definition 
+console.log(factorial);  // fun definition will be printed 
 
 //Avoid using it 
 console.log(fact2(5));   
@@ -150,4 +151,12 @@ var factorial = function (n){  // no name for fun
 }; 
 
 
-/* Tip : if you use fun name then you can easily trace out fun calls in Call stack 3 */
+/* Tip : if you use fun name then you can easily trace out fun calls in Call stack (in case of Recursion) */
+
+
+
+
+
+//>>>>>>>>>>>>>>>>>>>> Passing function as Arguments
+
+
