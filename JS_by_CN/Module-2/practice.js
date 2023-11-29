@@ -122,11 +122,11 @@ var factorial = function fact2(n){
 };  // don't forget to terminate the statement (semicolon ; )
 
 // calling fun via fun expression name 
-console.log(factorial(5));  // 120
-console.log(factorial);  // fun definition will be printed 
+// console.log(factorial(5));  // 120
+// console.log(factorial);  // fun definition will be printed 
 
 //Avoid using it 
-console.log(fact2(5));   
+// console.log(fact2(5));   
 // Error - you have no access to inner elements 
 // Note - " you can't use fun name dirtectly via outside that fun scope "
 
@@ -156,7 +156,97 @@ var factorial = function (n){  // no name for fun
 
 
 
-
 //>>>>>>>>>>>>>>>>>>>> Passing function as Arguments
 
+// explaining this concept using example - combination  formula
 
+//To calculate a combination, you will need to calculate a factorial.
+var factorial = function (n){ 
+    var ans=1;
+    for(var i=1; i<=n; i++){
+        ans = ans*i;
+    }
+    return ans;
+}; 
+
+// creating a fun named ncr
+function ncr(n,r, factorial){
+    return factorial(n)/(factorial(r) * factorial(n-r));
+}
+
+//printing result 
+// console.log(ncr(5,2,factorial));
+
+
+
+//>>>>>>>>>>>>>>>>>>>>  Arrays 
+// An array in JavaScript is a type of global object that is used to store data.
+// Arrays consist of an ordered collection or list containing zero or more data types,
+// use numbered indices starting from 0 to access specific items.
+
+var arr = [1,2,3,4];
+// var arr2 = new Array(1,2,3,4,5);
+// console.log(arr[6]);  // undefined 
+
+
+arr[2]= 90;   // updation 
+
+arr[7]=100;
+// console.log(arr); //[ 1, 2, 90, 4, <3 empty items>, 100 ]   
+// if you assign value at next index skipping some indexe JS automatically declare those skipped indexes as a empty space 
+// length will be counted 
+// console.log(arr.length)   //8
+
+
+//creating empty array using new keyword
+// var arr = new Array(); 
+// var arr = new Array(2); // empty Array of 2 length 
+
+// var arr3 = new Array(2,3); // elements of array 
+
+/*
+  Note -
+       single value  => size of Array 
+       multiple value => elements of Array
+*/
+
+
+// Array in JS can be Heterogeneous (Dissimilar elements )
+
+var arr5 = ["abc",10, true, 20];
+
+/*
+“Contiguous” refers to things that are adjacent or touching each other along a common boundary,
+ in terms of definition. Additionally, “continual” refers to something that happens repeatedly or at regular intervals,
+ while “continuous” implies something that is uninterrupted, with no breaks or pauses.
+*/
+
+
+
+
+
+
+// Function on Arrays 
+
+var arr6 = [4,5,6,7];
+// console.log(arr6.length);  //4
+
+arr6.push(10);  // [4,5,6,7,10]  
+
+// console.log(arr6);
+arr6.pop();  // last element deleted (10)
+// console.log(arr6);
+
+// console.log(arr6.shift());  // 4 - jo bhi element shift (aage se delte hoga wo print ho jayega screen par )
+// console.log(arr6);
+
+arr6.unshift(8);   // starting index (0) par jakar 8 set ho jayega sabko 1 shift karke 
+// console.log(arr6);
+
+/*
+[ 4, 5, 6, 7, 10 ]
+[ 4, 5, 6, 7 ]
+4               - jo bhi element shift (aage se delte hoga wo print ho jayega screen par )
+[ 5, 6, 7 ]   
+[ 8, 5, 6, 7 ]]
+ */
