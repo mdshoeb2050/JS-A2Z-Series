@@ -253,11 +253,88 @@ arr6.unshift(8);   // starting index (0) par jakar 8 set ho jayega sabko 1 shift
 
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Splice function
+let myArr = [0,1,2,3,4,5];
+// console.log("A ", myArr);   //// A  [ 0, 1, 2, 3, 4, 5 ]
+
+const myn1 = myArr.slice(0, 3)     //Returns a copy of a section of an array.
+// console.log(myn1);             //[ 0, 1, 2 ]
+
+// console.log("B ", myArr);      //B  [ 0, 1, 2, 3, 4, 5 ]
+
+const myn2 = myArr.splice(1, 3)  
+// console.log(myn2);         // [ 1, 2, 3 ]
+
+// console.log("C ", myArr);  //C  [ 0, 4, 5 ]  - Original Array got manupulated due to splice()  - * interview Q {slice vs splice}
 
 
+var arr7 =[2,3,4,5,6];
+// console.log(arr7.splice(2,0,10)); // []   // 2nd index par jakar no delete element & 10 insert that index , rest elements got shifted rightward.
+// console.log(arr7); // [ 2, 3, 10, 4, 5, 6 ] 
 
+//Perform Multiple insertion & deletion
 
+arr7.splice(2,0,10,20,40);
+// console.log(arr7); 
+/*
+ [
+   2, 3, 10, 20,
+   40, 4,  5,  6 
+]
+*/
+
+arr7.splice(2,2,40,50);  // 2nd index par jakar , 2 element delete & 40,50 inserted from that index
+// console.log(arr7); 
+/*
+  [
+   2, 3, 40, 50,
+  40, 4,  5,  6
+]
+*/
+
+var fruits =['Apple', 'Orange','Kiwi','Strawberry'];
+fruits.splice(4,1,'Banana'); 
+// console.log(fruits); // [ 'Apple', 'Orange', 'Kiwi', 'Strawberry', 'Banana' ]
 
 
 
 //>>>>>>>>>>>>>>>>>>>>>>> Iterating over Arrays 
+
+// There are multiple ways to iterate over Arrays but here i am discusssing 3 types
+// while , for loop
+// for ... in  // we'll study in object topic
+// forEach
+
+// Example -
+var fruits2 = [ 'Apple', 'Orange', 'Kiwi', 'Strawberry', 'Banana' ];
+
+// iterating using for loop
+for(var i=0; i<fruits.length; i++){
+    // calling a fun to print it 
+    // print(fruits2[i]);
+}
+// function print (element){
+//     console.log(element);
+// }
+/*
+Apple
+Orange
+Kiwi
+Strawberry
+Banana
+*/
+
+// 2nd way - forEach method
+// console.log("Printing elements using forEach method :");
+function print (element){
+    console.log(element);
+}
+
+// fruits2.forEach(print);  // just give fun name on which you want to iterate frequently 
+/*
+Printing elements using forEach method :
+Apple
+Orange
+Kiwi
+Strawberry
+Banana
+*/
