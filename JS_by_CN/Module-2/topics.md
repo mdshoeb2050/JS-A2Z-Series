@@ -20,11 +20,7 @@
 ### Detailed topics what i have studied
 
 - Function 
-- Variable length Arguments 
-<p>
-less argument - NaN
-More arguments - print result & Ignore 
-</p>
+- Variable length Arguments (less argument - NaN More arguments - print result & Ignore )
 - Function Hoisting  (move fun declaration on the top of program)
 - Function and Scope ( A particula are where it has full access over its elements )
 - Function within Function ( Recursion ,Nested fun)
