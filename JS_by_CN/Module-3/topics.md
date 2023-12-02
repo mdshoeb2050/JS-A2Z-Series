@@ -12,3 +12,8 @@
 - Iterating over array using for in method
 - Timing Events
 - Countdown Timer
+
+
+### Summary of class 
+
+- Objects - 
