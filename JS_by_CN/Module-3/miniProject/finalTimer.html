@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+  <title>Countdown Timer</title>
+
+</head>
+
+<body>
+
+<div id="timer-container">
+    <!-- adding user input box with label  -->
+  <label for="duration">Set Countdown (seconds):</label>
+  <input type="number" id="duration" min="1" value="10">
+  <br>
+  <!-- adding two buttons  -->
+  <button onclick="startTimer()">Start</button>
+  <button onclick="resetTimer()">Reset</button>
+  <!-- timer countdown -->
+  <p id="timer-display">00:10</p>
+
+  <!-- Adding horizontal progress bar -->
+  <div id="progress-bar-container">
+    <div id="progress-bar"></div>
+  </div>
+</div>
+
+<!-- Adding javascript  -->
+<script>
+  let countdown;
+  let durationInput = document.getElementById('duration');
+  let timerDisplay = document.getElementById('timer-display');
+  let progressBar = document.getElementById('progress-bar');
+
+  function startTimer() {
+    const duration = parseInt(durationInput.value);
+    if (isNaN(duration) || duration <= 0) {
+      alert('Please enter a valid positive number for the countdown duration.');
+      return;
+    }
+
+    let timer = duration;
+    displayTime(timer);
+
+    countdown = setInterval(function() {
+      timer--;
+      displayTime(timer);
+      updateProgressBar(duration - timer, duration);
+
+      if (timer === 0) {
+        clearInterval(countdown);
+        alert('Countdown complete!');
+        resetTimer();
+      }
+    }, 1000);
+  }
+
+  function resetTimer() {
+    clearInterval(countdown);
+    durationInput.value = 10;
+    displayTime(10);
+    updateProgressBar(0, 10);
+  }
+
+  function displayTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    const formattedTime = `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+    timerDisplay.textContent = formattedTime;
+  }
+
+  function updateProgressBar(current, total) {
+    const percentage = (current / total) * 100;
+    progressBar.style.width = `${percentage}%`;
+  }
+</script>
+
+</body>
+</html>

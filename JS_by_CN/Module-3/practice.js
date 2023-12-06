@@ -74,6 +74,9 @@ var prop = "gender";
 
 // 1st way
 delete employee._name;
+// 2nd way using square bracket notation
+delete employee["_name"]; 
+
 // console.table(employee.gender);     //male
 // console.table(employee["gender"]);  // male
 // console.table(employee["_name"]);  //undefined
@@ -116,6 +119,7 @@ var obj3 ={
     age : 25
 }
 
+// here obj1 and obj3 have different memory location
 // console.log(obj1==obj3);  //false
 // console.log(obj1===obj3); //false
 
@@ -150,8 +154,12 @@ for(prop in  student2){  // here prop is bydefault var which iterate automatical
 // it  will jsut simply return Array of keys 
 
 // 1st way using Object.keys() method 
-var keys = Object.keys(student2);
+var keys = Object.keys(student2); 
 // console.log(keys);  //[ '5', 'name', 'rollno', 'marks', 'college' ]
+
+//or 
+// console.log( Object.keys(student2));
+
 
 // 2nd way using Object.getOwnPropertyNames() method 
 var keys2 = Object.getOwnPropertyNames(student2);
@@ -189,16 +197,24 @@ var student3 = {
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>> Arrays and Objects
 
+// Arrays use numbered indexes while  objects use Named indexes.
 // Array is something like Object , here in case of array keys are index.
+/*
+When to Use Arrays?
+    We use arrays whenever we want to create and store a list of multiple items in a single variable.
+    Arrays are especially useful when creating ordered collections,
+    where items in the collection can be accessed by their numerical position in the list.
+*/
+
 
 var arr = [20,30,40,50];
 
 // you can access both ways
 // As we know that object keys must be string  
-// console.log(arr[0]); //20 // here bcoz of Coercion interger value got converted into string format 
+// console.log(arr[0]); //20 // here bcoz of "Coercion concept" interger value got converted into string format 
 // console.log(arr["0"]);  //20
 
-//here creating object like arrray 
+//here creating same arr using object representation - Curly braces
 var obj = {
     "0" : 20,
     "1" : 30,
@@ -221,7 +237,7 @@ arr.prop1="hello";
 // console.log(arr);
 //[ 20, 30, 40, 50, <6 empty items>, 200, prop1: 'hello' ]
 
-// console.log(arr.length); //11   // prop1 not counted here bcoz of string value
+// console.log(arr.length); //11   // prop1 not counted here bcoz of string value, only integer value will be counted 
 
 // for ..in method on Array
 for(prop in arr){
@@ -235,3 +251,73 @@ for(prop in arr){
 10
 prop1
 */
+
+
+
+//>>>>>>>>>>>>>>>>>>>>> Timing Events 
+
+/*
+Timing events are mechanisms that allow you to execute code or functions at specified intervals or after a certain delay.
+These events are essential for creating animations, managing asynchronous tasks, and implementing features such as timeouts and intervals. 
+*/
+
+
+// setTimeout
+
+// used to execute a specified function or code block after a specified delay (in milliseconds).
+// It triggers the code once after the specified time interval.
+//basic structure
+/*
+var id2 = setTimeout(() => {
+        
+    }, timeout);
+*/
+
+
+// now let's play 
+
+function hello(){
+    console.log("Hello Everyone, How is the Josh ? ");
+}
+
+// setTimeout(hello, 3000);  //  hello - fun exression , hello() - fun call
+
+
+// setInterval
+// used to repeatedly execute a specified function or code block at a defined interval.
+// It continues to trigger the code at the specified interval until it is cleared using `clearInterval`.
+
+let counter =1;
+function wishing(){
+    console.log("Happy birthday :)");
+    counter++;
+    // if we want to stop use clearInterval to clear instance id of the setInterval
+    if(counter == 4){
+        clearInterval(instanceId); // stop the interval after 3 execution
+    }
+}
+
+// var instanceId = setInterval(wishing, 2000); // here setInterval create instances and return its Id.
+
+
+// Both `clearTimeout` and `clearInterval` 
+// functions are used to cancel a timeout or interval set by `setTimeout` or `setInterval`, respectively.
+/*
+   setTimeout - clearTimeout  - 1 bar 
+   setInterval - clearInterval - Bar bar 
+*/
+ 
+
+// Example of setTimeout , clearTimeout
+let timeoutId = setTimeout(function() {
+    console.log("This code won't run.");
+  }, 2000);
+
+clearTimeout(timeoutId); // Cancel the timeout, preventing the code from executing
+
+
+// Example of setInterval, clearInterval
+  let intervalId = setInterval(function() {
+    console.log("This code won't run repeatedly.");
+  }, 1000);
+  clearInterval(intervalId); // Cancel the interval, preventing further executions

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    #timer-container {
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    label {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #timer-display {
+      font-size: 36px;
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+  <title>Countdown Timer</title>
+</head>
+<body>
+
+<div id="timer-container">
+  <label for="duration">Set Countdown (seconds):</label>
+  <input type="number" id="duration" min="1" value="10">
+  <br>
+  <button onclick="startTimer()">Start</button>
+  <button onclick="resetTimer()">Reset</button>
+  <p id="timer-display">00:10</p>
+</div>
+
+<script>
+  let countdown;
+  let durationInput = document.getElementById('duration');
+  let timerDisplay = document.getElementById('timer-display');
+
+  function startTimer() {
+    const duration = parseInt(durationInput.value);
+    if (isNaN(duration) || duration <= 0) {
+      alert('Please enter a valid positive number for the countdown duration.');
+      return;
+    }
+
+    let timer = duration;
+    displayTime(timer);
+
+    countdown = setInterval(function() {
+      timer--;
+      displayTime(timer);
+
+      if (timer === 0) {
+        clearInterval(countdown);
+        alert('Countdown complete!');
+      }
+    }, 1000);
+  }
+
+  function resetTimer() {
+    clearInterval(countdown);
+    durationInput.value = 10;
+    displayTime(10);
+  }
+
+  function displayTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    const formattedTime = `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+    timerDisplay.textContent = formattedTime;
+  }
+</script>
+
+</body>
+</html>
