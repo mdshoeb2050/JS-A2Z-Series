@@ -237,7 +237,7 @@ arr6.push(10);  // [4,5,6,7,10]
 arr6.pop();  // last element deleted (10)
 // console.log(arr6);
 
-// console.log(arr6.shift());  // 4 - jo bhi element shift (aage se delte hoga wo print ho jayega screen par )
+// console.log(arr6.shift());  // 4 - jo bhi element shift (aage se delete hoga wo print ho jayega screen par )
 // console.log(arr6);
 
 arr6.unshift(8);   // starting index (0) par jakar 8 set ho jayega sabko 1 shift karke 

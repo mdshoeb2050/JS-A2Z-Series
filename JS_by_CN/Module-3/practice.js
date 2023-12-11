@@ -151,7 +151,7 @@ for(prop in  student2){  // here prop is bydefault var which iterate automatical
 }
 
 // Another ways to print Object's  keys in the form of array of keys 
-// it  will jsut simply return Array of keys 
+// it  will just simply return Array of keys 
 
 // 1st way using Object.keys() method 
 var keys = Object.keys(student2); 
@@ -197,7 +197,7 @@ var student3 = {
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>> Arrays and Objects
 
-// Arrays use numbered indexes while  objects use Named indexes.
+// Arrays use numbered indexes while  objects use Named indexes.(string value)
 // Array is something like Object , here in case of array keys are index.
 /*
 When to Use Arrays?
@@ -280,7 +280,7 @@ function hello(){
     console.log("Hello Everyone, How is the Josh ? ");
 }
 
-// setTimeout(hello, 3000);  //  hello - fun exression , hello() - fun call
+// setTimeout(hello, 3000);  //  hello - fun exression ,   hello() - fun call
 
 
 // setInterval

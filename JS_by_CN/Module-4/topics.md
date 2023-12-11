@@ -4,19 +4,20 @@
 
 1. **DOM**  
    - Summary 
-   - Dom is a representation of logical structure of a web page.
+   - DOM is a representation of logical structure of a web page.
 2. **Accessing DOM**  
    - Summary 
    - JS uses DOM to manipulate the webpage.
    - document.documentElement , window.document(print overall html structure )
    - window.screen (All the details regarding browser screen) 
    - Every elements have lots of property , understand one by one
-   - API : interface b/w somebody else, code written by somebody else.
+   - API : interface b/w user & application, 
+   - API : code written by somebody else.
    - API makes things easy for us.
    - DOM serve as a programming API for us.
 3. **Fetching Elements**
    - Summary 
-   - `document.getElementById('')` ,`document.getElementByTagName('')`,`document.getElementByTagName('')`, `heading.style.color='red'`
+   - `document.getElementById('')` ,`document.getElementByTagName('')`, `heading.style.color='red'`
    - store Result and manipulate according to your needs.
    - Access document elements by using CSS selectors 
    - `document.querySelector('#id')` ,`document.querySelector('.class')`,`document.querySelectorAll('.class') `
@@ -41,9 +42,9 @@
 6. **External JS File**
     - Summary 
     - `External JS` - adding external file named .js extension
-7. **Other Mouse and Key**
+7. **Other Mouse and Keyboard events**
     - Summary
-    -  
+    - `mouseover`,`mouseout`,
 8. **Propagation of Event**
     - Summary 
     - 
