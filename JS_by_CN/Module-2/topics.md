@@ -20,9 +20,10 @@
 ### Detailed topics what i have studied
 
 - Function 
-- Variable length Arguments (less argument - NaN More arguments - print result & Ignore )
+- Variable length Arguments (less argument - NaN,   
+   More arguments - print result & Ignore )
 - Function Hoisting  (move fun declaration on the top of program)
-- Function and Scope ( A particula are where it has full access over its elements )
+- Function and Scope ( A particular area where it has full access over its elements )
 - Function within Function ( Recursion ,Nested fun)
 - Function Expression ( storing fun res into a variable)
 - Function Declaration vs Exprerssions ( fun Exp doesn't support Hoisting concept & widely used)

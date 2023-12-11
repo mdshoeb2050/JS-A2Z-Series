@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Applying event handling fun on a button -->
+    <button id="btn" onclick="alert('Hello world!')">Say Hello</button>
+    <br><br>
+    <!-- Another way of doing this in console or script.js -->
+    <button id="btn2" onclick="alert('good Bye!')">Say Bye</button>
+
+    <!-- Also you can add fun  directly with event handler inline -->
+    <button id="btn2" onclick="printMsg()" >Say Bye</button>
+    <br><br>
+    <!-- signup -->
+    <button id="btn3">Sign up</button>
+
+    <br><br>
+    <!-- login  -->
+    <button id="btn4">login</button>
+
+    <!-- <script>
+        var mybtn = document.getElementById('btn2');
+        mybtn.addEventListener('click',function(){
+            alert('Good Bye');
+        });
+    </script> -->
+
+      <!-- Adding external script.js file  -->
+      <script type="text/javascript" src="script.js"></script>
+</body>
+</html >
