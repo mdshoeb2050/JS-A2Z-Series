@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propogation of events </title>
+    <style>
+         #inner{
+            position: absolute;
+            z-index: 1;
+            margin: 60px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 213, 0);
+         }
+         #outer{
+            width: 250px;
+            height: 250px;
+            background-color: red;
+            position: relative;
+         }
+    </style>
+</head>
+<body>
+   
+
+    <div id="outer">
+        <div id="inner"></div>
+    </div>
+
+    <h1>Homework</h1>
+    <h2>Feel free Explore more about event propagation.</h2>
+    <h2>practice more and more on DOM propagation</h2>
+    <h3>Explore more about deltaX </h3>
+    <a href="https://www.w3schools.com/jsref"></a>
+
+    <!-- javascript -->
+    <script>
+        //when you click inner div it will automatically triggerd all the nodes upward 
+        // inner -> outer -> document
+
+     
+        var innerDiv = document.getElementById('inner');
+        innerDiv.addEventListener('click',function(event){
+            console.log("inner Div");
+            event.stopPropagation(); // to stop propagation going forward 
+        }); 
+
+
+        // outer -> document
+        var outerDiv = document.getElementById('outer');
+        outerDiv.addEventListener('click',function(){
+            console.log("Outer Div");
+        });
+
+        // document
+        document.addEventListener('click',function(){
+            console.log("Document");
+        })
+        
+    
+    </script>
+</body>
+</html>

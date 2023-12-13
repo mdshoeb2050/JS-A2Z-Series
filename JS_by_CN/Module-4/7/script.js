@@ -45,3 +45,58 @@ function print7(){
     alert("A mouse button is released over an element"); 
 }
 outer.addEventListener('mouseup',print7);
+
+
+
+//>>>>>>>> Key Events 
+
+/**************************\
+//>>>>>>>>>>>>>  keypress  - when you press & leave any key, then  it will be counted. 
+// Note - keyPress ingnore - Arrow keys , space , tab , shift etc buttons.
+\**************************/
+
+
+
+// Task - you have to fetch data from input tag and confirm key press event via Event listener
+var searchInput =document.getElementById('search');
+// searchInput.addEventListener('keypress',function(){
+//    alert("Key Pressed....!");
+// });
+
+//another way on whole document keypress checking 
+// document.addEventListener('keypress',function() {
+//     console.log("key press invoked."); 
+// });
+
+
+
+//>>>>>>>>>>>>>  keydown  - when you press any key it will be immediately counted - used in games 
+// searchInput.addEventListener('keydown',function(){
+//     alert("keydown method ....!");
+//  });
+
+// or applying on whole document 
+// document.addEventListener('keydown',function() {
+//     console.log("key down invoked."); 
+// });
+
+
+
+//>>>>>>>>>>>>>  keyup - when you leave  any key after pressing,... it will be counted.
+
+// document.addEventListener('keyup',function() {
+//     console.log("key up invoked."); 
+// });
+
+
+
+/**************************\
+| Key code  method         |
+\**************************/
+
+// document.addEventListener('keydown',function (event) { // here passing default param in fun 
+//     console.log("key down invoked.", event.keyCode); // deprecated 
+//     console.log("key down invoked.", KeyboardEvent.keyCode); 
+
+// });
+// tip - you can catch events via fun and perform any method on it acc to your needs 

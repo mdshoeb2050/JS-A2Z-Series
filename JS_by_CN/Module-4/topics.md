@@ -44,13 +44,38 @@
     - `External JS` - adding external file named .js extension
 7. **Other Mouse and Keyboard events**
     - Summary
-    - `mouseover`,`mouseout`,
+    - `mouseover`,`mouseout`,and many more.
+    - `keypress` - press and leave then it will be counted 
+    - `keydown`- counted if only press  
+    - `keyup` - counted when you leave key
 8. **Propagation of Event**
     - Summary 
-    - 
+    - when you clicked on / triggers a particular `event target element` then all the `Nodes` in that path from `document` to `event target element` will be triggered automatically .
+    - eg :  inner -> outer -> document 
 9.  **Strict Mode**
-    - Summary
-    -  
+    - Summary (5min)
+    -   
 10. **More on Strict Mode**
     - Summary
     -  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
