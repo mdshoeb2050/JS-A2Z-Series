@@ -8,7 +8,7 @@
 2. **Accessing DOM**  
    - Summary 
    - JS uses DOM to manipulate the webpage.
-   - document.documentElement , window.document(print overall html structure )
+   - document.getElementById , window.document(print overall html structure )
    - window.screen (All the details regarding browser screen) 
    - Every elements have lots of property , understand one by one
    - API : interface b/w user & application, 
@@ -18,7 +18,7 @@
 3. **Fetching Elements**
    - Summary 
    - `document.getElementById('')` ,`document.getElementByTagName('')`, `heading.style.color='red'`
-   - store Result and manipulate according to your needs.
+   - store Result into a variable and manipulate according to your needs.
    - Access document elements by using CSS selectors 
    - `document.querySelector('#id')` ,`document.querySelector('.class')`,`document.querySelectorAll('.class') `
    - querySelector - return 1st matching result
@@ -31,9 +31,9 @@
     - Summary 
     - Event handler is nothing but just a Function
     - `on + eventname`
-    - `addEventListener(-, -)`- two parameter , event name & event listener/handler
-    - event listener : the action which has to be performed.
-    - the browser invoke the handler when `specified event occurs` 
+    - `addEventListener(-, -)`- two parameter , event name & event listener/handler (Function)
+    - event listener (function) : the action/Task which has to be performed.
+    - the `browser invoke the handler` when `specified event occurs` 
     - when user clicks over a document or moves over a document : mouse events generated.
     - 
 5. **Script Tag**
@@ -54,10 +54,18 @@
     - eg :  inner -> outer -> document 
 9.  **Strict Mode**
     - Summary (5min)
-    -   
+    - using `use strict ` method  in JS will help to investigate to find error in your code.
+    - `use strict ` - it treat Js code as newer version.
+    - eg - count=0; (ReferenceError : count is not defined)
 10. **More on Strict Mode**
     - Summary
-    -  
+    - you can use `use strict` method inside functions and Globally also.
+    - eg - inside a fun -  demo =100; (ReferenceError : count is not defined)
+
+11. **Assignments**
+    - summary
+  
+
 
 
 
