@@ -17,11 +17,13 @@
    - Summary Notes 
 7. **More on Closures**
    - Summary Notes 
-8. **Let in for loops**
+8. **Closures and let**
    - Summary Notes 
-9.  **Arrow Functions**
+9.  **Let in for loops**
+   - Summary Notes 
+10. **Arrow Functions**
     - Summary Notes 
-10. **Bindings in Arrow Functions**
+11. **Bindings in Arrow Functions**
     - Summary Notes 
-11. **Assignments Key points**
+12. **Assignments Key points**
     - Summary Notes 
