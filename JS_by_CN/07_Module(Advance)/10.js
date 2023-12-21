@@ -2,7 +2,7 @@
  * Arrow Function
 \**********************/
 
-// It make writing functions easy for US.
+// It make writing functions easy for us.
 
 // you can write fun in  a very compact way. (beauty of Arrow Fun)
 

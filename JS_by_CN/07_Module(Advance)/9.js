@@ -5,7 +5,7 @@
 // let is bound to "block scope" - every iteration of for loop there is new binding of 'i' will be created.
 // for each iteration - 'i' ke har ek value ke liye ek naya scope defined hoga.
 
-// seperate varible value of every round of for loop
+// seperate variable value of "every round of for loop"
 
 // Babel is just a standard of JS
 

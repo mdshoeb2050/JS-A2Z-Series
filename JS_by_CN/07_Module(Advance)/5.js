@@ -5,7 +5,7 @@
 // let - create Block Scope 
 
 
-// IIFE - it also create Block Scope - commonly used a lot of codebases (get familiar with it)
+// IIFE - it also create Block Scope - commonly used in a lot of codebases (just get familiar with it)
 
 //Previous code using IIFE method
 

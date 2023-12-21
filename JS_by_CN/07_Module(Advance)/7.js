@@ -2,7 +2,7 @@
  * More on Closures
 \**********************/
 
-// definition- closure is a concept where inner fun preserves scope chains  of outer fun.
+// definition- closure is a concept where inner fun preserves scope chains of outer fun.
 
 // var i=10;
 // function outer() {
@@ -23,7 +23,7 @@
 // `
 // Agar sahi me dekha jaye to varible 'j' delete ho jana chahiye jaise hi outer fun ka call finish hota h, 
 // Lekin due to Closure concept ab bhi 'j' exist karega memory so that outer fun ke andar jitne bhi inner fun h usko use kar paye kyuki unke pass outer fun ke scope ka  Reference hai.
-// Isiliye jab inner fun call karte h to global context me outer fun call finish hone par uske varible exist karenge so that inner fun usko access kar paye . 
+// Isiliye jab inner fun call karte h to global context me outer fun call finish hone par uske variables  exist karenge so that inner fun usko access kar paye . 
 // `
 
 

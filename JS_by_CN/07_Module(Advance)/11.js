@@ -31,7 +31,7 @@ var p = new Person("Md. Shoeb");
 
 setTimeout(() => console.log(this),1000);  // Person { name : "Md. Shoeb"}
 // Arrow fun doesn't have their own bindings.
-// it refers to "Person class", They actually lookup  in "outer scope" for the value of "this". (that's why it is reffering to "Person class")
+// it will refers to "Person class", They actually lookup  in "outer scope" for the value of "this". (that's why it is reffering to "Person class")
 
 
 

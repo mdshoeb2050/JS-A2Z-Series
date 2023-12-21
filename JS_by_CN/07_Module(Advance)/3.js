@@ -10,6 +10,6 @@
 
 // To avoid confusion use Let or const instead of using 'var'
 
-// if any varible with same name present in anywhere in multipple file then it will create confusion and value get override with current varible value .
+// if any variable with same name present in anywhere in multiple files then it will create confusion and value get override with current variable value .
 
 
